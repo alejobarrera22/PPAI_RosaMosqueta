@@ -33,8 +33,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbl_Hasta = new System.Windows.Forms.Label();
             this.gBox_Periodo = new System.Windows.Forms.GroupBox();
-            this.pan_Llamadas = new System.Windows.Forms.Panel();
             this.btn_Aceptar = new System.Windows.Forms.Button();
+            this.pan_Llamadas = new System.Windows.Forms.Panel();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.gBox_Periodo.SuspendLayout();
             this.SuspendLayout();
@@ -42,78 +42,88 @@
             // lbl_Desde
             // 
             this.lbl_Desde.AutoSize = true;
-            this.lbl_Desde.Location = new System.Drawing.Point(58, 79);
+            this.lbl_Desde.Location = new System.Drawing.Point(44, 64);
+            this.lbl_Desde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Desde.Name = "lbl_Desde";
-            this.lbl_Desde.Size = new System.Drawing.Size(51, 16);
+            this.lbl_Desde.Size = new System.Drawing.Size(41, 13);
             this.lbl_Desde.TabIndex = 0;
             this.lbl_Desde.Text = "Desde:";
             // 
             // date_Desde
             // 
-            this.date_Desde.Location = new System.Drawing.Point(135, 74);
+            this.date_Desde.Location = new System.Drawing.Point(101, 60);
+            this.date_Desde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.date_Desde.Name = "date_Desde";
-            this.date_Desde.Size = new System.Drawing.Size(277, 22);
+            this.date_Desde.Size = new System.Drawing.Size(209, 20);
             this.date_Desde.TabIndex = 1;
             this.date_Desde.UseWaitCursor = true;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(571, 74);
+            this.dateTimePicker1.Location = new System.Drawing.Point(428, 60);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(277, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(209, 20);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.UseWaitCursor = true;
             // 
             // lbl_Hasta
             // 
             this.lbl_Hasta.AutoSize = true;
-            this.lbl_Hasta.Location = new System.Drawing.Point(494, 79);
+            this.lbl_Hasta.Location = new System.Drawing.Point(370, 64);
+            this.lbl_Hasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Hasta.Name = "lbl_Hasta";
-            this.lbl_Hasta.Size = new System.Drawing.Size(46, 16);
+            this.lbl_Hasta.Size = new System.Drawing.Size(38, 13);
             this.lbl_Hasta.TabIndex = 2;
             this.lbl_Hasta.Text = "Hasta:";
             // 
             // gBox_Periodo
             // 
             this.gBox_Periodo.Controls.Add(this.btn_Aceptar);
-            this.gBox_Periodo.Location = new System.Drawing.Point(27, 39);
+            this.gBox_Periodo.Location = new System.Drawing.Point(20, 32);
+            this.gBox_Periodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gBox_Periodo.Name = "gBox_Periodo";
-            this.gBox_Periodo.Size = new System.Drawing.Size(884, 127);
+            this.gBox_Periodo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gBox_Periodo.Size = new System.Drawing.Size(663, 103);
             this.gBox_Periodo.TabIndex = 4;
             this.gBox_Periodo.TabStop = false;
             this.gBox_Periodo.Text = "Período";
-            // 
-            // pan_Llamadas
-            // 
-            this.pan_Llamadas.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pan_Llamadas.Location = new System.Drawing.Point(27, 200);
-            this.pan_Llamadas.Name = "pan_Llamadas";
-            this.pan_Llamadas.Size = new System.Drawing.Size(884, 322);
-            this.pan_Llamadas.TabIndex = 5;
+            this.gBox_Periodo.Enter += new System.EventHandler(this.gBox_Periodo_Enter);
             // 
             // btn_Aceptar
             // 
-            this.btn_Aceptar.Location = new System.Drawing.Point(787, 86);
+            this.btn_Aceptar.Location = new System.Drawing.Point(590, 70);
+            this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Aceptar.Name = "btn_Aceptar";
-            this.btn_Aceptar.Size = new System.Drawing.Size(91, 35);
+            this.btn_Aceptar.Size = new System.Drawing.Size(68, 28);
             this.btn_Aceptar.TabIndex = 0;
             this.btn_Aceptar.Text = "Aceptar";
             this.btn_Aceptar.UseVisualStyleBackColor = true;
             // 
+            // pan_Llamadas
+            // 
+            this.pan_Llamadas.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pan_Llamadas.Location = new System.Drawing.Point(20, 162);
+            this.pan_Llamadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pan_Llamadas.Name = "pan_Llamadas";
+            this.pan_Llamadas.Size = new System.Drawing.Size(663, 262);
+            this.pan_Llamadas.TabIndex = 5;
+            // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(814, 548);
+            this.btn_Cancelar.Location = new System.Drawing.Point(610, 445);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(97, 31);
+            this.btn_Cancelar.Size = new System.Drawing.Size(73, 25);
             this.btn_Cancelar.TabIndex = 6;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             // 
             // VentanaConsultarEncuesta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 591);
+            this.ClientSize = new System.Drawing.Size(706, 480);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.pan_Llamadas);
             this.Controls.Add(this.dateTimePicker1);
@@ -121,9 +131,11 @@
             this.Controls.Add(this.date_Desde);
             this.Controls.Add(this.lbl_Desde);
             this.Controls.Add(this.gBox_Periodo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "VentanaConsultarEncuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Encuesta";
+            this.Load += new System.EventHandler(this.VentanaConsultarEncuesta_Load);
             this.gBox_Periodo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -17,5 +17,14 @@ namespace PPAI_RosaMosqueta
             InitializeComponent();
         }
 
+        private void VentanaConsultarEncuesta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gBox_Periodo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
