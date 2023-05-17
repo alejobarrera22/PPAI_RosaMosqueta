@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
     <Compile Include="Interfaces\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,8 +82,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entidades\" />
-    <Folder Include="Gestor\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
