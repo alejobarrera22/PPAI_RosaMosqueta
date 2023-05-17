@@ -47,7 +47,6 @@
             this.lbl_Desde.Size = new System.Drawing.Size(51, 16);
             this.lbl_Desde.TabIndex = 0;
             this.lbl_Desde.Text = "Desde:";
-            this.lbl_Desde.Click += new System.EventHandler(this.label1_Click);
             // 
             // date_Desde
             // 
@@ -83,7 +82,6 @@
             this.gBox_Periodo.TabIndex = 4;
             this.gBox_Periodo.TabStop = false;
             this.gBox_Periodo.Text = "Período";
-            this.gBox_Periodo.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pan_Llamadas
             // 
@@ -126,7 +124,6 @@
             this.Name = "VentanaConsultarEncuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Encuesta";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.gBox_Periodo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
