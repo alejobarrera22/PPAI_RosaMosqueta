@@ -1,8 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Class1
+namespace PPAI_RosaMosqueta.Entidades
 {
-	public Class1()
-	{
-	}
+    public class RespuestaCliente
+    {
+        private string FechaEncuesta;
+        
+        public RespuestaCliente(string fecEncuesta)
+        {
+            FechaEncuesta = fecEncuesta;
+        }
+
+        public string FechaDeEncuesta;
+        {
+            get => FechaEncuesta; set => FechaEncuesta = value;
+        }
+
+
+        public string DescripcionRta;
+        {
+            get => DescripcionRta;
+        }
+    }   
 }
