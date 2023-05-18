@@ -20,10 +20,10 @@ namespace PPAI_RosaMosqueta.Entidades
             get => FechaEncuesta; set => FechaEncuesta = value;
         }
 
-
         public string DescripcionRta;
         {
             get => DescripcionRta;
         }
     }   
 }
+
