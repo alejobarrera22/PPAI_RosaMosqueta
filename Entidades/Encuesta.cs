@@ -33,7 +33,7 @@ namespace PPAI_RosaMosqueta.Entidades
         // esta fecha actual se la tiene que pasar el controlador
         public bool esVigente(DateTime fechaActual)
         {
-            if (fechaFinVigencia < fechaActual) {  return true; }
+            if (fechaFinVigencia < fechaActual) { return true; }
             else { return false; }
         }
 
@@ -41,7 +41,7 @@ namespace PPAI_RosaMosqueta.Entidades
         public string getDescripcionEncuesta() { return descripcion; }
 
         // getter de sabra dios que cosa en un caso de uso que no es el nuestro
-        public string getDescripcionCliente() { }
+        public string esDescripcionDeCliente() { }
 
         public List<Pregunta> getPreguntas() { return preguntas; }
     }
