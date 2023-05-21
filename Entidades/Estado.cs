@@ -22,22 +22,6 @@ namespace PPAI_RosaMosqueta.Entidades
             return nombre == "finalizada";
         }
 
-        //Tengo duda con el resto de los estados
-        public bool esDescartada()
-        {
-            return nombre == "descartada";
-        }
-
-        public bool esCorrecta()
-        {
-            return nombre == "correcta";
-        }
-
-        public bool esObservacion()
-        {
-            return nombre == "observacion";
-        }
-
         public string getNombre() { return nombre;}
     }
 }
