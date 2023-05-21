@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\Llamada.cs" />
     <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
     <Compile Include="Interfaces\Form1.cs">
       <SubType>Form</SubType>
