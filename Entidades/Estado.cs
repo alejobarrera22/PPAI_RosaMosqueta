@@ -19,7 +19,7 @@ namespace PPAI_RosaMosqueta.Entidades
 
         public bool esFinalzada()
         {
-            return nombre == "finalizada";
+            return nombre == "Finalizada";
         }
 
         public string getNombre() { return nombre;}

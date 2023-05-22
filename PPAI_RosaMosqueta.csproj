@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\CambioEstado.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Llamada.cs" />
     <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
