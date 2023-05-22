@@ -17,5 +17,17 @@ namespace PPAI_RosaMosqueta
             InitializeComponent();
         }
 
+        //Se puede cancelar cuando quieran
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        // filtrar por periodo
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

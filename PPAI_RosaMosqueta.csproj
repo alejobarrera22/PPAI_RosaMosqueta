@@ -49,16 +49,25 @@
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Llamada.cs" />
     <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
-    <Compile Include="Interfaces\Form1.cs">
+    <Compile Include="Interfaces\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Interfaces\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\VentanaConsultarEncuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\VentanaConsultarEncuesta.Designer.cs">
+      <DependentUpon>VentanaConsultarEncuesta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Interfaces\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\VentanaConsultarEncuesta.resx">
+      <DependentUpon>VentanaConsultarEncuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

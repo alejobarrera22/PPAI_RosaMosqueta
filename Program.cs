@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PPAI_RosaMosqueta.Interfaces;
 
 namespace PPAI_RosaMosqueta
 {
@@ -16,7 +17,7 @@ namespace PPAI_RosaMosqueta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaConsultarEncuesta());
+            Application.Run(new FrmMain());
         }
     }
 }
