@@ -17,6 +17,11 @@ namespace PPAI_RosaMosqueta.Entidades
 
         }
 
+        public bool esIniciada()
+        {
+            return nombre == "Iniciada";
+        }
+
         public bool esFinalzada()
         {
             return nombre == "Finalizada";
