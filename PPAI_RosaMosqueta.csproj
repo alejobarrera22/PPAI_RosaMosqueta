@@ -52,12 +52,6 @@
     <Compile Include="Entidades\RepuestaCliente.cs" />
     <Compile Include="Entidades\RepuestaPosible.cs" />
     <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
-    <Compile Include="Interfaces\FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces\VentanaConsultarEncuesta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,9 +60,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Interfaces\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\VentanaConsultarEncuesta.resx">
       <DependentUpon>VentanaConsultarEncuesta.cs</DependentUpon>
     </EmbeddedResource>
