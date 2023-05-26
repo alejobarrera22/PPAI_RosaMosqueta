@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PPAI_RosaMosqueta.Gestor;
 
 namespace PPAI_RosaMosqueta
 {
     public partial class VentanaConsultarEncuesta : Form
     {
+        private GestorConsultarEncuesta gestor { get; set; }
         public VentanaConsultarEncuesta()
         {
             InitializeComponent();
+            gestor = new GestorConsultarEncuesta(this);
         }
 
         //Se puede cancelar cuando quieran
@@ -24,12 +27,15 @@ namespace PPAI_RosaMosqueta
         }
 
 
-        // filtrar por periodo
+       
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-
+            //borrar el contenido de la dataGrindLlamadas
+            //dataGrindLlamadas.Rows.Clear();
+            gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
         }
 
+        // Le indica al gestor que inicie el CU
         private void opcionConsultarEncuesta_Click(object sender, EventArgs e)
         {
             habilitarPantalla();
@@ -37,15 +43,31 @@ namespace PPAI_RosaMosqueta
 
         private void habilitarPantalla()
         {
-            this.gBox_Periodo.Visible = true;
-            this.buttonBuscar.Visible = true;
-            this.dateTimePicker1.Visible = true;
-            this.date_Desde.Visible = true;
-            this.pan_Llamadas.Visible = true;
-            this.btn_Cancelar.Visible = true;
+            gBox_Periodo.Visible = true;
+            buttonBuscar.Visible = true;
+            gestor.consultarEnucesta();
+            
+            pan_Llamadas.Visible = true;
+            btn_Cancelar.Visible = true;
         }
 
         private void VentanaConsultarEncuesta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void solicitarSeleccionPeriodo()
+        {
+            dateHasta.Visible = true;
+            dateDesde.Visible = true;
+        }
+
+        private void date_Desde_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

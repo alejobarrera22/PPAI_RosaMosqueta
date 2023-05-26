@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lbl_Desde = new System.Windows.Forms.Label();
-            this.date_Desde = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateDesde = new System.Windows.Forms.DateTimePicker();
+            this.dateHasta = new System.Windows.Forms.DateTimePicker();
             this.lbl_Hasta = new System.Windows.Forms.Label();
             this.gBox_Periodo = new System.Windows.Forms.GroupBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -52,25 +52,28 @@
             this.lbl_Desde.Text = "Desde:";
             this.lbl_Desde.Visible = false;
             // 
-            // date_Desde
+            // dateDesde
             // 
-            this.date_Desde.Location = new System.Drawing.Point(101, 117);
-            this.date_Desde.Margin = new System.Windows.Forms.Padding(2);
-            this.date_Desde.Name = "date_Desde";
-            this.date_Desde.Size = new System.Drawing.Size(209, 20);
-            this.date_Desde.TabIndex = 1;
-            this.date_Desde.UseWaitCursor = true;
-            this.date_Desde.Visible = false;
+            this.dateDesde.Location = new System.Drawing.Point(101, 117);
+            this.dateDesde.Margin = new System.Windows.Forms.Padding(2);
+            this.dateDesde.Name = "dateDesde";
+            this.dateDesde.Size = new System.Drawing.Size(209, 20);
+            this.dateDesde.TabIndex = 1;
+            this.dateDesde.UseWaitCursor = true;
+            this.dateDesde.Value = new System.DateTime(2023, 5, 26, 0, 0, 0, 0);
+            this.dateDesde.Visible = false;
+            this.dateDesde.ValueChanged += new System.EventHandler(this.date_Desde_ValueChanged);
             // 
-            // dateTimePicker1
+            // dateHasta
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(428, 117);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(209, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.UseWaitCursor = true;
-            this.dateTimePicker1.Visible = false;
+            this.dateHasta.Location = new System.Drawing.Point(428, 117);
+            this.dateHasta.Margin = new System.Windows.Forms.Padding(2);
+            this.dateHasta.Name = "dateHasta";
+            this.dateHasta.Size = new System.Drawing.Size(209, 20);
+            this.dateHasta.TabIndex = 3;
+            this.dateHasta.UseWaitCursor = true;
+            this.dateHasta.Visible = false;
+            this.dateHasta.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // lbl_Hasta
             // 
@@ -153,21 +156,24 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.CancelButton = this.btn_Cancelar;
-            this.ClientSize = new System.Drawing.Size(700, 573);
+            this.ClientSize = new System.Drawing.Size(696, 540);
             this.Controls.Add(this.opcionConsultarEncuesta);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.pan_Llamadas);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateHasta);
             this.Controls.Add(this.lbl_Hasta);
-            this.Controls.Add(this.date_Desde);
+            this.Controls.Add(this.dateDesde);
             this.Controls.Add(this.lbl_Desde);
             this.Controls.Add(this.gBox_Periodo);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaConsultarEncuesta";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Encuesta";
             this.Load += new System.EventHandler(this.VentanaConsultarEncuesta_Load);
@@ -180,8 +186,8 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Desde;
-        private System.Windows.Forms.DateTimePicker date_Desde;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateDesde;
+        private System.Windows.Forms.DateTimePicker dateHasta;
         private System.Windows.Forms.Label lbl_Hasta;
         private System.Windows.Forms.GroupBox gBox_Periodo;
         private System.Windows.Forms.Panel pan_Llamadas;
