@@ -9,7 +9,7 @@ namespace PPAI_RosaMosqueta.Entidades
     public class RespuestaCliente
     {
         private string FechaEncuesta;
-        
+
         public RespuestaCliente(string fecEncuesta)
         {
             FechaEncuesta = fecEncuesta;
@@ -24,6 +24,6 @@ namespace PPAI_RosaMosqueta.Entidades
         {
             get => DescripcionRta;
         }
-    }   
+    }
 }
 
