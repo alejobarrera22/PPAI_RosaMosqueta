@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PPAI_RosaMosqueta
+namespace PPAI_RosaMosqueta.Interfaces
 {
-    public partial class VentanaConsultarEncuesta : Form
+    public partial class opciones : Form
     {
-        public VentanaConsultarEncuesta()
+        public opciones()
         {
             InitializeComponent();
         }
 
+        private void opciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
