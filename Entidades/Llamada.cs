@@ -37,7 +37,7 @@ namespace PPAI_RosaMosqueta.Entidades
             return fechasCreacion.Min();
         }
 
-        /*
+        /* asi lo resolvio otro grupo
          *  //metodo llamado esDePeriodo() que valida si la llamada esta dentro de un periodo dado por 2 parametros date, preguntandole a todos sus "CambioEstado" si el primero esta dentro del periodo y de ese obtiene la fecha y hora
         public bool esDePeriodo(DateTime fechaDesde, DateTime fechaHasta)
         {

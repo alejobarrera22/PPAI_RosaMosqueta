@@ -125,6 +125,7 @@
             this.pan_Llamadas.Size = new System.Drawing.Size(663, 262);
             this.pan_Llamadas.TabIndex = 5;
             this.pan_Llamadas.Visible = false;
+            this.pan_Llamadas.Paint += new System.Windows.Forms.PaintEventHandler(this.pan_Llamadas_Paint);
             // 
             // btn_Cancelar
             // 
@@ -159,7 +160,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.CancelButton = this.btn_Cancelar;
-            this.ClientSize = new System.Drawing.Size(696, 540);
+            this.ClientSize = new System.Drawing.Size(695, 552);
             this.Controls.Add(this.opcionConsultarEncuesta);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.pan_Llamadas);

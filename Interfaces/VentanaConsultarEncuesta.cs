@@ -26,15 +26,6 @@ namespace PPAI_RosaMosqueta
             this.Close();
         }
 
-
-       
-        private void buttonBuscar_Click(object sender, EventArgs e)
-        {
-            //borrar el contenido de la dataGrindLlamadas
-            //dataGrindLlamadas.Rows.Clear();
-            gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
-        }
-
         // Le indica al gestor que inicie el CU
         private void opcionConsultarEncuesta_Click(object sender, EventArgs e)
         {
@@ -45,7 +36,7 @@ namespace PPAI_RosaMosqueta
         {
             gBox_Periodo.Visible = true;
             buttonBuscar.Visible = true;
-            gestor.consultarEnucesta();
+            gestor.consultarEncuesta();
             
             pan_Llamadas.Visible = true;
             btn_Cancelar.Visible = true;
@@ -61,6 +52,12 @@ namespace PPAI_RosaMosqueta
             dateHasta.Visible = true;
             dateDesde.Visible = true;
         }
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            //borrar el contenido de la dataGrindLlamadas
+            //dataGrindLlamadas.Rows.Clear();
+            gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
+        }
 
         private void date_Desde_ValueChanged(object sender, EventArgs e)
         {
@@ -68,6 +65,11 @@ namespace PPAI_RosaMosqueta
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pan_Llamadas_Paint(object sender, PaintEventArgs e)
         {
 
         }
