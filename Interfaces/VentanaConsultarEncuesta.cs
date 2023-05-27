@@ -37,8 +37,6 @@ namespace PPAI_RosaMosqueta
             gBox_Periodo.Visible = true;
             buttonBuscar.Visible = true;
             gestor.consultarEncuesta();
-            
-            pan_Llamadas.Visible = true;
             btn_Cancelar.Visible = true;
         }
 
@@ -59,6 +57,23 @@ namespace PPAI_RosaMosqueta
             gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
         }
 
+        public void pedirSeleccionLLamada()
+        {
+            
+            dataLlamadasEncontradas.Visible = true;
+            //para agregar valores a la tabla 
+            dataLlamadasEncontradas.Rows.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewCell cell1 = new DataGridViewTextBoxCell();
+                cell1.Value = "a";
+                row.Cells.Add(cell1);
+
+                dataLlamadasEncontradas.Rows.Add(row);
+            }
+        }
+
         private void date_Desde_ValueChanged(object sender, EventArgs e)
         {
 
@@ -69,7 +84,7 @@ namespace PPAI_RosaMosqueta
 
         }
 
-        private void pan_Llamadas_Paint(object sender, PaintEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

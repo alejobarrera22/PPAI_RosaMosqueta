@@ -34,10 +34,12 @@
             this.lbl_Hasta = new System.Windows.Forms.Label();
             this.gBox_Periodo = new System.Windows.Forms.GroupBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
-            this.pan_Llamadas = new System.Windows.Forms.Panel();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.opcionConsultarEncuesta = new System.Windows.Forms.Button();
+            this.dataLlamadasEncontradas = new System.Windows.Forms.DataGridView();
+            this.llamadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gBox_Periodo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLlamadasEncontradas)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Desde
@@ -116,17 +118,6 @@
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
-            // pan_Llamadas
-            // 
-            this.pan_Llamadas.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pan_Llamadas.Location = new System.Drawing.Point(20, 219);
-            this.pan_Llamadas.Margin = new System.Windows.Forms.Padding(2);
-            this.pan_Llamadas.Name = "pan_Llamadas";
-            this.pan_Llamadas.Size = new System.Drawing.Size(663, 262);
-            this.pan_Llamadas.TabIndex = 5;
-            this.pan_Llamadas.Visible = false;
-            this.pan_Llamadas.Paint += new System.Windows.Forms.PaintEventHandler(this.pan_Llamadas_Paint);
-            // 
             // btn_Cancelar
             // 
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -152,6 +143,23 @@
             this.opcionConsultarEncuesta.UseVisualStyleBackColor = true;
             this.opcionConsultarEncuesta.Click += new System.EventHandler(this.opcionConsultarEncuesta_Click);
             // 
+            // dataLlamadasEncontradas
+            // 
+            this.dataLlamadasEncontradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataLlamadasEncontradas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.llamadas});
+            this.dataLlamadasEncontradas.Location = new System.Drawing.Point(20, 222);
+            this.dataLlamadasEncontradas.Name = "dataLlamadasEncontradas";
+            this.dataLlamadasEncontradas.Size = new System.Drawing.Size(240, 150);
+            this.dataLlamadasEncontradas.TabIndex = 8;
+            this.dataLlamadasEncontradas.Visible = false;
+            this.dataLlamadasEncontradas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // llamadas
+            // 
+            this.llamadas.HeaderText = "LlamadasEncontradas";
+            this.llamadas.Name = "llamadas";
+            // 
             // VentanaConsultarEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,9 +169,9 @@
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.CancelButton = this.btn_Cancelar;
             this.ClientSize = new System.Drawing.Size(695, 552);
+            this.Controls.Add(this.dataLlamadasEncontradas);
             this.Controls.Add(this.opcionConsultarEncuesta);
             this.Controls.Add(this.btn_Cancelar);
-            this.Controls.Add(this.pan_Llamadas);
             this.Controls.Add(this.dateHasta);
             this.Controls.Add(this.lbl_Hasta);
             this.Controls.Add(this.dateDesde);
@@ -179,6 +187,7 @@
             this.Text = "Consultar Encuesta";
             this.Load += new System.EventHandler(this.VentanaConsultarEncuesta_Load);
             this.gBox_Periodo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLlamadasEncontradas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,10 +200,11 @@
         private System.Windows.Forms.DateTimePicker dateHasta;
         private System.Windows.Forms.Label lbl_Hasta;
         private System.Windows.Forms.GroupBox gBox_Periodo;
-        private System.Windows.Forms.Panel pan_Llamadas;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Button opcionConsultarEncuesta;
+        private System.Windows.Forms.DataGridView dataLlamadasEncontradas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn llamadas;
     }
 }
 
