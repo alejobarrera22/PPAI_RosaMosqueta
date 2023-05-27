@@ -49,6 +49,7 @@
     <Compile Include="Entidades\CambioEstado.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Llamada.cs" />
+    <Compile Include="Entidades\Pregunta.cs" />
     <Compile Include="Entidades\RepuestaCliente.cs" />
     <Compile Include="Entidades\RepuestaPosible.cs" />
     <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
