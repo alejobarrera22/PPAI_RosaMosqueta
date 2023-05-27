@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PPAI_RosaMosqueta.Entidades
 {
-    public class RepuestaPosible
+    public class RespuestaPosible
     {
         private string descripcion { get; set; }
         //No estoy seguro de que tipo tendria que ser el valor y como utilizarlo
         private int valor { get; set; }
-        public RepuestaPosible(String descripcion, int valor)
+        public RespuestaPosible(String descripcion, int valor)
         {
             this.descripcion = descripcion;
             this.valor = valor;

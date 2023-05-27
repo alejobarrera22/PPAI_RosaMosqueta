@@ -14,10 +14,11 @@ namespace PPAI_RosaMosqueta.Entidades
 
 
         // el constructor para la clase Encuesta con una lista de preguntas inicialmente vacia
-        public Encuesta(string descripcion, DateTime fechaFinVigencia)
+        public Encuesta(string descripcion, DateTime fechaFinVigencia, List<Pregunta> pregunts)
         {
             this.descripcion = descripcion;
             this.fechaFinVigencia = fechaFinVigencia;
+            this.preguntas = pregunts;
         }
 
         // entiendo como si fuera de agregar las preguntas a la encuesta

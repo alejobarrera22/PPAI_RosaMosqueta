@@ -9,15 +9,28 @@ namespace PPAI_RosaMosqueta.Entidades
 {
     public class Llamada
     {
-        public List<CambioEstado> cambioEstado { get; set; }
-        public List<RepuestaCliente> repuestasDeEncuesta { get; set; }
+        private List<CambioEstado> cambioEstado { get; set; }
+        private List<RepuestaCliente> repuestasDeEncuesta { get; set; }
+        private Cliente cliente { get; set; }
+        private string descripcionOperador { get; set; }
+        private string detalleAccionRequerida { get; set; }
+        private int duracion { get; set; }
+        private bool encuestaEnviada { get; set; }
+        private string observacionAuditor { get; set; }
 
 
-        public Llamada(List<CambioEstado> cambioEstado)
+        public Llamada(List<CambioEstado> cambioEstado, List<RespuestaCliente> resp, Cliente cliente, string descOp, string detAcc,
+            int durac, bool encuest, strign obsAud)
         {
             this.cambioEstado = cambioEstado;
+            this.cliente = cliente;
+            this.repuestasDeEncuesta = resp;
+            this.descripcionOperador = descOp;
+            this.detalleAccionRequerida = detAcc;
+            this.duracion = durac;
+            this.encuestaEnviada = encuest;
+            this.observacionAuditor = obsAud;
         }
-
 
 
         //El método EsDePeriodo() utiliza el método DeterminarEstadoInicial() para obtener la fecha inicial y luego verifica si está dentro del rango definido

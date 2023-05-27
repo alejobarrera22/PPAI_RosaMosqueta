@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PPAI_RosaMosqueta.Entidades
 {
-    public class RepuestaCliente
+    public class RespuestaCliente
     {
         private DateTime fechaEncuesta { get; set; }
-        private RepuestaPosible repuestaSeleccionada { get; set;}
+        private RespuestaPosible repuestaSeleccionada { get; set;}
 
-        public RepuestaCliente(DateTime fechaEncuesta, RepuestaPosible repuestaSeleccionada)
+        public RespuestaCliente(DateTime fechaEncuesta, RepuestaPosible repuestaSeleccionada)
         {
             this.fechaEncuesta = fechaEncuesta;
             this.repuestaSeleccionada = repuestaSeleccionada;
