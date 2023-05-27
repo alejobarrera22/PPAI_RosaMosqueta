@@ -18,12 +18,5 @@ namespace PPAI_RosaMosqueta.Entidades
             this.nombreCompleto = nombre;
             this.nroCelular = numero;
         }
-        public bool esCliente()
-        {
-            // Verificar si el cliente cumple ciertas condiciones
-            bool cumpleCondiciones = (!string.IsNullOrEmpty(dni) && !string.IsNullOrEmpty(nombreCompleto) && !string.IsNullOrEmpty(nroCelular));
 
-            return cumpleCondiciones;
-        }
-    }
 }
