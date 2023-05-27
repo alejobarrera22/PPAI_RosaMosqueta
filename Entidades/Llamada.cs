@@ -14,21 +14,21 @@ namespace PPAI_RosaMosqueta.Entidades
         public int duracionEnSegundos { get; set; }
         public Boolean encuestaEnviada { get; set; }
         public string observacionAuditor { get; set; }
-        public List<string> respuestasDeEncueta { get; set; }
-        public List<string> cambioEstado { get; set; }
+        public List<RespuestaDeCliente> respuestasDeEncueta { get; set; }
+        public List<CambioEstado> cambioEstado { get; set; }
         public string cliente { get; set; }
 
         public Llamada(int duracionEnSegundos, string cliente, string cambioEstadoNuevo)
         {
             this.duracionEnSegundos = duracionEnSegundos;
             this.cliente = cliente;
-            this.cambioEstado = new List<string>();
+            this.cambioEstado = new List<CambioEstado>();
             cambioEstado.Add(cambioEstadoNuevo);
             this.descripcionOperador = "No Data Yet";
             this.detalleAccionRequerida = "No Data Yet";
             this.encuestaEnviada = false;
             this.observacionAuditor = "No Data Yet";
-            this.respuestasDeEncueta = new List<string>();
+            this.respuestasDeEncueta = new List<RespuestaDeCliente>();
         }
 
         public int calcularDuracion(DateTime horaInicio, DateTime horaFin)
@@ -40,5 +40,36 @@ namespace PPAI_RosaMosqueta.Entidades
         {
             return true;
         }
+
+        public string getRespuesta()
+        {
+            return true;
+        }
+
+        public string getDuracion()
+        {
+            return true;
+        }
+
+        public string determinarEsadoInicial()
+        {
+            return true;
+        }
+
+        public string determinarUltimoEstado()
+        {
+            return true;
+        }
+
+        public string getNombreClienteDeLlamada()
+        {
+            return true;
+        }
+
+        public string tieneRtas()
+        {
+            return true
+        }
+
     }
 }
