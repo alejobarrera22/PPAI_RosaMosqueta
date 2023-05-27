@@ -17,12 +17,9 @@ namespace PPAI_RosaMosqueta.Entidades
             Valor = val;
 
         }
-        public string Descrip
+        public string getDescripcionRta()
         {
-            get => Descripcion; set => Descripcion = value;
-
+            return Descripcion;
         }
-        public int Valr
-        { get => Valor; set => Valor = value; }
     }
 }
