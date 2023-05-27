@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\CambioEstado.cs" />
+    <Compile Include="Entidades\Encuesta.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Llamada.cs" />
     <Compile Include="Entidades\Pregunta.cs" />

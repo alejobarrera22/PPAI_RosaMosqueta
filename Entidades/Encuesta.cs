@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,7 +41,7 @@ namespace PPAI_RosaMosqueta.Entidades
         public string getDescripcionEncuesta() { return descripcion; }
 
         // getter de sabra dios que cosa en un caso de uso que no es el nuestro
-        public string esDescripcionDeCliente() { }
+        //public string esDescripcionDeCliente() { }
 
         public List<Pregunta> getPreguntas() { return preguntas; }
     }
