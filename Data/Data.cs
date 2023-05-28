@@ -69,6 +69,7 @@ namespace PPAI_RosaMosqueta.Data
         public static Pregunta Preg9 { get; set; } = new Pregunta("Qué tan satisfecho está con la atención del operador?", lisRes7);
 
         // LISTA DE PREGUNTAS
+        public static List<Pregunta> listadoPreguntas = new List<Pregunta> { Preg1, Preg2, Preg3, Preg4, Preg5, Preg6, Preg7, Preg8, Preg9 };
         static List<Pregunta> lisPreg1 = new List<Pregunta> { Preg1, Preg2, Preg8 };
         static List<Pregunta> lisPreg2 = new List<Pregunta> { Preg3, Preg4, Preg9 };
         static List<Pregunta> lisPreg3 = new List<Pregunta> { Preg5, Preg6, Preg7 };
