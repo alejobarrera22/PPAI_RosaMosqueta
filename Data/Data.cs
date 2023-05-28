@@ -45,14 +45,27 @@ namespace PPAI_RosaMosqueta.Data
             //calculo que este seria el lista repuestas
             respuestaClientes = new List<RespuestaCliente>() { respuestaCliente1, respuestaCliente2, respuestaCliente3, respuestaCliente4, respuestaCliente5};
             //Encuestas
-            Encuesta encuesta1 = new Encuesta("solucion consuta", new DateTime(2023, 5, 22), respuestaPosible1);
+            Encuesta encuesta1 = new Encuesta("solucion consuta", new DateTime(2023, 5, 22),null);
+            Encuesta encuesta2 = new Encuesta("Encuesta 2", new DateTime(2023, 5, 25), null);
+            Encuesta encuesta3 = new Encuesta("Encuesta 3", new DateTime(2023, 5, 30), null);
 
 
             //Estados
+            Estado estadoFinalizada = new Estado("Finalizada");
+            Estado estadoIniciada = new Estado("Iniciada");
+            Estado estadoCancelada = new Estado("cancelada");
 
-            //Cambio de estado de llamada (uno por llamada
+            estados = new List<Estado>() { estadoFinalizada, estadoIniciada, estadoCancelada, };
 
+            //Cambio de estado de llamada (uno por llamada)
+            CambioEstado cambioEstado1 = new CambioEstado(new DateTime(2023, 05, 22), estadoFinalizada);
+            CambioEstado cambioEstado2 = new CambioEstado(new DateTime(2023, 05, 25), estadoIniciada);
+            CambioEstado cambioEstado3 = new CambioEstado(new DateTime(2023, 05, 30), estadoCancelada);
+            CambioEstado cambioEstado4 = new CambioEstado(new DateTime(2023, 06, 1), estadoFinalizada);
+
+            cambiosEstados = new List<CambioEstado>() {  cambioEstado1, cambioEstado2, cambioEstado3, cambioEstado4 };
             //llamada
+
         }
     }
 }

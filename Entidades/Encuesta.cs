@@ -29,7 +29,7 @@ namespace PPAI_RosaMosqueta.Entidades
         }
 
         // jamas sabremos para que es este metodo
-        public bool esEncuestaDeCliente() { }
+       // public bool esEncuestaDeCliente() { }
 
         // esta fecha actual se la tiene que pasar el controlador
         public bool esVigente(DateTime fechaActual)
