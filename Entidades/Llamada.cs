@@ -10,7 +10,7 @@ namespace PPAI_RosaMosqueta.Entidades
     public class Llamada
     {
         private List<CambioEstado> cambioEstado { get; set; }
-        private List<RepuestaCliente> repuestasDeEncuesta { get; set; }
+        private List<RespuestaCliente> repuestasDeEncuesta { get; set; }
         private Cliente cliente { get; set; }
         private string descripcionOperador { get; set; }
         private string detalleAccionRequerida { get; set; }
@@ -19,17 +19,17 @@ namespace PPAI_RosaMosqueta.Entidades
         private string observacionAuditor { get; set; }
 
 
-        public Llamada(List<CambioEstado> cambioEstado, List<RespuestaCliente> resp, Cliente cliente, string descOp, string detAcc,
-            int durac, bool encuest, strign obsAud)
+        public Llamada(List<CambioEstado> cambioEstado, List<RespuestaCliente> repuestasDeEncuesta, Cliente cliente, string descripcionOperador, string detalleAccionRequerida,
+            int duracion, bool encuestaEnviada, string observacionAuditor)
         {
             this.cambioEstado = cambioEstado;
             this.cliente = cliente;
-            this.repuestasDeEncuesta = resp;
-            this.descripcionOperador = descOp;
-            this.detalleAccionRequerida = detAcc;
-            this.duracion = durac;
-            this.encuestaEnviada = encuest;
-            this.observacionAuditor = obsAud;
+            this.repuestasDeEncuesta = repuestasDeEncuesta;
+            this.descripcionOperador = descripcionOperador;
+            this.detalleAccionRequerida = detalleAccionRequerida;
+            this.duracion = duracion;
+            this.encuestaEnviada = encuestaEnviada;
+            this.observacionAuditor = observacionAuditor;
         }
 
 
