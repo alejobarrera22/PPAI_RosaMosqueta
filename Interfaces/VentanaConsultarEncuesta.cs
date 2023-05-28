@@ -57,17 +57,18 @@ namespace PPAI_RosaMosqueta
             gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
         }
 
-        public void pedirSeleccionLLamada()
+        public void pedirSeleccionLLamada(List<string> llamadasEncontradas)
         {
             
             dataLlamadasEncontradas.Visible = true;
+            seleccioneLlamada.Visible = true;
             //para agregar valores a la tabla 
             dataLlamadasEncontradas.Rows.Clear();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < llamadasEncontradas.Count; i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 DataGridViewCell cell1 = new DataGridViewTextBoxCell();
-                cell1.Value = "a";
+                cell1.Value = "Llamada "+i;
                 row.Cells.Add(cell1);
 
                 dataLlamadasEncontradas.Rows.Add(row);
@@ -86,6 +87,26 @@ namespace PPAI_RosaMosqueta
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tomarSeleccionLlamada(dataLlamadasEncontradas.CurrentRow.Index);
+        }
+
+        private void tomarSeleccionLlamada(int row)
+        {
+            gestor.llamadaSeleccionada(row);
+        }
+
+        public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual)
+        {
+            labelNombreCompleto.Visible = true;
+            textNombreCompleto.Visible = true;
+            textNombreCompleto.Text = nombreCliente;
+            labelDuracionLlamada.Visible = true;
+            textBoxDuracionLLamada.Visible = true;
+            textBoxDuracionLLamada.Text = duracion;
+            labelEstadoActualLlamada.Visible =true;
+            textBoxEstadoActualLLamada.Visible = true;
+            textBoxEstadoActualLLamada.Text = estadoActual;
+
 
         }
     }

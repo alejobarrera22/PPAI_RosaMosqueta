@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,15 +10,28 @@ namespace PPAI_RosaMosqueta.Entidades
 {
     public class Llamada
     {
-        public List<CambioEstado> cambioEstado { get; set; }
-        public List<RespuestaCliente> repuestasDeEncuesta { get; set; }
+        private List<CambioEstado> cambioEstado { get; set; }
+        private List<RespuestaCliente> repuestasDeEncuesta { get; set; }
+        private Cliente cliente { get; set; }
+        private string descripcionOperador { get; set; }
+        private string detalleAccionRequerida { get; set; }
+        private int duracion { get; set; }
+        private bool encuestaEnviada { get; set; }
+        private string observacionAuditor { get; set; }
 
-        //constructor
-        public Llamada(List<CambioEstado> cambioEstado)
+
+        public Llamada(List<CambioEstado> cambioEstado, List<RespuestaCliente> repuestasDeEncuesta, Cliente cliente, string descripcionOperador, string detalleAccionRequerida,
+            int duracion, bool encuestaEnviada, string observacionAuditor)
         {
             this.cambioEstado = cambioEstado;
+            this.cliente = cliente;
+            this.repuestasDeEncuesta = repuestasDeEncuesta;
+            this.descripcionOperador = descripcionOperador;
+            this.detalleAccionRequerida = detalleAccionRequerida;
+            this.duracion = duracion;
+            this.encuestaEnviada = encuestaEnviada;
+            this.observacionAuditor = observacionAuditor;
         }
-
 
 
         //El método EsDePeriodo() utiliza el método DeterminarEstadoInicial() para obtener la fecha inicial y luego verifica si está dentro del rango definido
@@ -32,8 +46,7 @@ namespace PPAI_RosaMosqueta.Entidades
         //las fechas de inicio de cada elemento de CambioEstado. Luego, se utiliza el método Min() para obtener la fecha mínima de la lista.
         public DateTime determinarEstadoInical()
         {
-            List<DateTime> fechasCreacion =
-                this.cambioEstado.Select(fechaHoraInicio => fechaHoraInicio.getFechaHoraIncio()).ToList();
+            List<DateTime> fechasCreacion = this.cambioEstado.Select(fechaHoraInicio => fechaHoraInicio.getFechaHoraIncio()).ToList();
             return fechasCreacion.Min();
         }
 
@@ -54,9 +67,35 @@ namespace PPAI_RosaMosqueta.Entidades
         //devolvera True si la tiene repuestasDeEncuasta, es decir la lista de repuestas no esta vacia
         public bool tieneRtas()
         {
-            return repuestasDeEncuesta.Count > 0;
+            // no funca el respuesDeEncuesta.Count > 0 (creo que da error al compralo con null) lo podemos dejar asi, o en el Data darle en vez de null darle [](array vacio)
+            //asi andaria en el caso que no tenga repuestas
+            return (repuestasDeEncuesta != null);
         }
 
+
+        public string getNombreClienteDeLLamada()
+        {
+            return cliente.getNombre();
+        }
+
+        public int getDuracion()
+        {
+            return duracion;
+        }
+
+        public string determinarUltimoEstado()
+        {
+            //// Ordenar la lista en orden descendente según la fechaHoraInicio
+            var ultimoEstado = cambioEstado.OrderByDescending(c => c.getFechaHoraIncio()).FirstOrDefault();
+            if (ultimoEstado != null)
+            {
+                //// Se encontró el último estado
+                // Accede a los atributos o propiedades del último estado si es necesario
+                return ultimoEstado.getNombreEstado();
+            }
+            return null;
+
+        }
     }
 
 }

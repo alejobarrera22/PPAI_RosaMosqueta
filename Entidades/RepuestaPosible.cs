@@ -10,7 +10,6 @@ namespace PPAI_RosaMosqueta.Entidades
     {
         private string descripcion { get; set; }
         private int valor { get; set; }
-        //constructor
         public RespuestaPosible(string descripcion, int valor)
         {
             this.descripcion = descripcion;

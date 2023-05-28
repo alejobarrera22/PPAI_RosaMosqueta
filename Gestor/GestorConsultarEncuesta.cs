@@ -33,18 +33,44 @@ namespace PPAI_RosaMosqueta.Gestor
 
         public void filtrarPorPeridoYRepuestas(DateTime fechaDesde, DateTime fechaHasta)
         {
-            //llamadasEncontradas = new List<Llamada>();
-            //foreach (var llamada in llamadas)
-            //{
-            //    if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
-            //    {
-            //        llamadasEncontradas.Add(llamada);
-            //    }
-            //}
+            llamadasEncontradas = new List<Llamada>();
+            //no se me ocurrio otra forma para mostrala osino no me deja pasarle como parametro
+            List<string> llamadasEncontradasMostrar = new List<string>();
+            //aca saco del data la lista de llamadas
+            foreach (var llamada in Data.Data.listaDeLLamadas())
+            {
+                if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
+                {
+                    //Me sirve para luego seleccionarla
+                 llamadasEncontradas.Add(llamada);
+                 //solo me sirve para mostralas
+                 llamadasEncontradasMostrar.Add(llamada.ToString()); 
+                }
+            }
 
 
             //aca en verdad tendrian que pasarle como parametro las llamadas, para que solamente cuente cuantas hay y mostrarlas en la grilla
-            pantallaConsultarEncuesta.pedirSeleccionLLamada();
+            pantallaConsultarEncuesta.pedirSeleccionLLamada(llamadasEncontradasMostrar);
+        }
+        //lo invoca la ventana y le pasa como parametro el index de la fila seleccionada
+        public void llamadaSeleccionada(int row)
+        {
+            //se auto invoca para obtener todos los datoas y de la lista antes creada llamadasEncontrada le pasa la especifica gracias al [index]
+            getDatosLLamada(llamadasEncontradas[row]);
+        }
+
+        //obtiene los datos necesarios de la Llamada selecionada
+        public void getDatosLLamada(Llamada llamadaSeleccionada)
+        {
+            string nombreCliente = llamadaSeleccionada.getNombreClienteDeLLamada();
+            Console.WriteLine(nombreCliente);
+            string duracion = llamadaSeleccionada.getDuracion().ToString();
+            Console.WriteLine(duracion);
+            string estadoActual = llamadaSeleccionada.determinarUltimoEstado();
+            Console.WriteLine(estadoActual);
+            //Falta obtener las preguntas y repuestas,etc
+
+            pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, estadoActual);
         }
     }
 }

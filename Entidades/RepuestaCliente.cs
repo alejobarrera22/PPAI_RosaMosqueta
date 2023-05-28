@@ -11,10 +11,10 @@ namespace PPAI_RosaMosqueta.Entidades
         private DateTime fechaEncuesta { get; set; }
         private RespuestaPosible repuestaSeleccionada { get; set;}
 
-        public RespuestaCliente(DateTime fechaEncuesta, RespuestaPosible repuestaSeleccionada)
+        public RespuestaCliente(DateTime fechaEncuesta, RespuestaPosible respuestaSeleccionada)
         {
             this.fechaEncuesta = fechaEncuesta;
-            this.repuestaSeleccionada = repuestaSeleccionada;
+            this.repuestaSeleccionada = respuestaSeleccionada;
         }
 
         public string getDescripcionRta()

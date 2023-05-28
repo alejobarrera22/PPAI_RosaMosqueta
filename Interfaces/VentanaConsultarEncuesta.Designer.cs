@@ -38,6 +38,13 @@
             this.opcionConsultarEncuesta = new System.Windows.Forms.Button();
             this.dataLlamadasEncontradas = new System.Windows.Forms.DataGridView();
             this.llamadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seleccioneLlamada = new System.Windows.Forms.Label();
+            this.textNombreCompleto = new System.Windows.Forms.TextBox();
+            this.labelNombreCompleto = new System.Windows.Forms.Label();
+            this.labelDuracionLlamada = new System.Windows.Forms.Label();
+            this.textBoxDuracionLLamada = new System.Windows.Forms.TextBox();
+            this.textBoxEstadoActualLLamada = new System.Windows.Forms.TextBox();
+            this.labelEstadoActualLlamada = new System.Windows.Forms.Label();
             this.gBox_Periodo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLlamadasEncontradas)).BeginInit();
             this.SuspendLayout();
@@ -145,12 +152,18 @@
             // 
             // dataLlamadasEncontradas
             // 
+            this.dataLlamadasEncontradas.AllowUserToAddRows = false;
+            this.dataLlamadasEncontradas.AllowUserToDeleteRows = false;
+            this.dataLlamadasEncontradas.AllowUserToResizeColumns = false;
+            this.dataLlamadasEncontradas.AllowUserToResizeRows = false;
+            this.dataLlamadasEncontradas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataLlamadasEncontradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataLlamadasEncontradas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.llamadas});
-            this.dataLlamadasEncontradas.Location = new System.Drawing.Point(20, 222);
+            this.dataLlamadasEncontradas.Location = new System.Drawing.Point(47, 249);
             this.dataLlamadasEncontradas.Name = "dataLlamadasEncontradas";
-            this.dataLlamadasEncontradas.Size = new System.Drawing.Size(240, 150);
+            this.dataLlamadasEncontradas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataLlamadasEncontradas.Size = new System.Drawing.Size(184, 177);
             this.dataLlamadasEncontradas.TabIndex = 8;
             this.dataLlamadasEncontradas.Visible = false;
             this.dataLlamadasEncontradas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -159,6 +172,77 @@
             // 
             this.llamadas.HeaderText = "LlamadasEncontradas";
             this.llamadas.Name = "llamadas";
+            this.llamadas.ReadOnly = true;
+            this.llamadas.Width = 137;
+            // 
+            // seleccioneLlamada
+            // 
+            this.seleccioneLlamada.AutoSize = true;
+            this.seleccioneLlamada.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.seleccioneLlamada.Location = new System.Drawing.Point(44, 220);
+            this.seleccioneLlamada.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.seleccioneLlamada.Name = "seleccioneLlamada";
+            this.seleccioneLlamada.Size = new System.Drawing.Size(125, 13);
+            this.seleccioneLlamada.TabIndex = 9;
+            this.seleccioneLlamada.Text = "Selecione una LLamada:";
+            this.seleccioneLlamada.Visible = false;
+            // 
+            // textNombreCompleto
+            // 
+            this.textNombreCompleto.Location = new System.Drawing.Point(428, 249);
+            this.textNombreCompleto.Name = "textNombreCompleto";
+            this.textNombreCompleto.Size = new System.Drawing.Size(144, 20);
+            this.textNombreCompleto.TabIndex = 10;
+            this.textNombreCompleto.Visible = false;
+            // 
+            // labelNombreCompleto
+            // 
+            this.labelNombreCompleto.AutoSize = true;
+            this.labelNombreCompleto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelNombreCompleto.Location = new System.Drawing.Point(425, 220);
+            this.labelNombreCompleto.Name = "labelNombreCompleto";
+            this.labelNombreCompleto.Size = new System.Drawing.Size(126, 13);
+            this.labelNombreCompleto.TabIndex = 11;
+            this.labelNombreCompleto.Text = "Nombre Completo Cliente";
+            this.labelNombreCompleto.Visible = false;
+            // 
+            // labelDuracionLlamada
+            // 
+            this.labelDuracionLlamada.AutoSize = true;
+            this.labelDuracionLlamada.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelDuracionLlamada.Location = new System.Drawing.Point(425, 293);
+            this.labelDuracionLlamada.Name = "labelDuracionLlamada";
+            this.labelDuracionLlamada.Size = new System.Drawing.Size(97, 13);
+            this.labelDuracionLlamada.TabIndex = 12;
+            this.labelDuracionLlamada.Text = "Duracion LLamada";
+            this.labelDuracionLlamada.Visible = false;
+            // 
+            // textBoxDuracionLLamada
+            // 
+            this.textBoxDuracionLLamada.Location = new System.Drawing.Point(428, 327);
+            this.textBoxDuracionLLamada.Name = "textBoxDuracionLLamada";
+            this.textBoxDuracionLLamada.Size = new System.Drawing.Size(144, 20);
+            this.textBoxDuracionLLamada.TabIndex = 13;
+            this.textBoxDuracionLLamada.Visible = false;
+            // 
+            // textBoxEstadoActualLLamada
+            // 
+            this.textBoxEstadoActualLLamada.Location = new System.Drawing.Point(428, 407);
+            this.textBoxEstadoActualLLamada.Name = "textBoxEstadoActualLLamada";
+            this.textBoxEstadoActualLLamada.Size = new System.Drawing.Size(144, 20);
+            this.textBoxEstadoActualLLamada.TabIndex = 15;
+            this.textBoxEstadoActualLLamada.Visible = false;
+            // 
+            // labelEstadoActualLlamada
+            // 
+            this.labelEstadoActualLlamada.AutoSize = true;
+            this.labelEstadoActualLlamada.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelEstadoActualLlamada.Location = new System.Drawing.Point(425, 373);
+            this.labelEstadoActualLlamada.Name = "labelEstadoActualLlamada";
+            this.labelEstadoActualLlamada.Size = new System.Drawing.Size(184, 13);
+            this.labelEstadoActualLlamada.TabIndex = 14;
+            this.labelEstadoActualLlamada.Text = "Estado Actual Llamada Seleccionada";
+            this.labelEstadoActualLlamada.Visible = false;
             // 
             // VentanaConsultarEncuesta
             // 
@@ -168,7 +252,14 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.CancelButton = this.btn_Cancelar;
-            this.ClientSize = new System.Drawing.Size(695, 552);
+            this.ClientSize = new System.Drawing.Size(692, 538);
+            this.Controls.Add(this.textBoxEstadoActualLLamada);
+            this.Controls.Add(this.labelEstadoActualLlamada);
+            this.Controls.Add(this.textBoxDuracionLLamada);
+            this.Controls.Add(this.labelDuracionLlamada);
+            this.Controls.Add(this.labelNombreCompleto);
+            this.Controls.Add(this.textNombreCompleto);
+            this.Controls.Add(this.seleccioneLlamada);
             this.Controls.Add(this.dataLlamadasEncontradas);
             this.Controls.Add(this.opcionConsultarEncuesta);
             this.Controls.Add(this.btn_Cancelar);
@@ -204,7 +295,14 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Button opcionConsultarEncuesta;
         private System.Windows.Forms.DataGridView dataLlamadasEncontradas;
+        private System.Windows.Forms.Label seleccioneLlamada;
         private System.Windows.Forms.DataGridViewTextBoxColumn llamadas;
+        private System.Windows.Forms.TextBox textNombreCompleto;
+        private System.Windows.Forms.Label labelNombreCompleto;
+        private System.Windows.Forms.Label labelDuracionLlamada;
+        private System.Windows.Forms.TextBox textBoxDuracionLLamada;
+        private System.Windows.Forms.TextBox textBoxEstadoActualLLamada;
+        private System.Windows.Forms.Label labelEstadoActualLlamada;
     }
 }
 
