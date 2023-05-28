@@ -11,7 +11,7 @@ namespace PPAI_RosaMosqueta.Entidades
         private string descripcion { get; set; }
         //No estoy seguro de que tipo tendria que ser el valor y como utilizarlo
         private int valor { get; set; }
-        public RespuestaPosible(String descripcion, int valor)
+        public RespuestaPosible(string descripcion, int valor)
         {
             this.descripcion = descripcion;
             this.valor = valor;

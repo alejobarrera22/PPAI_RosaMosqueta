@@ -11,11 +11,11 @@ namespace PPAI_RosaMosqueta.Data
     {
         // CLIENTES
         // no me toma la clase Cliente pero serían así:
-        public static Cliente Cliente1 { get; set; } = new Cliente(43925111, "Franco Ambrosini", 3513901979);
+        public static Cliente Cliente1 { get; set; } = new Cliente(43925111, "Franco Ambrosini", 351301979);
         public static Cliente Cliente2 { get; set; } = new Cliente(43990147, "Alejo Barrera", 351159380);
-        public static Cliente Cliente3 { get; set; } = new Cliente(44854361, "Emilio Galimberti", 3519865210);
-        public static Cliente Cliente4 { get; set; } = new Cliente(44128649, "Lucas Piccino", 3516468193);
-        public static Cliente Cliente5 { get; set; } = new Cliente(43719840, "Martina Boatti", 3513901979);
+        public static Cliente Cliente3 { get; set; } = new Cliente(44854361, "Emilio Galimberti", 351986210);
+        public static Cliente Cliente4 { get; set; } = new Cliente(44128649, "Lucas Piccino", 351646893);
+        public static Cliente Cliente5 { get; set; } = new Cliente(43719840, "Martina Boatti", 351391979);
 
         // ESTADOS
         public static Estado EstadoFinalizada { get; set; } = new Estado("Finalizada");
@@ -65,8 +65,8 @@ namespace PPAI_RosaMosqueta.Data
         public static Pregunta Preg5 { get; set; } = new Pregunta("El operador le trató respetuosamente?", lisRes4);
         public static Pregunta Preg6 { get; set; } = new Pregunta("Con qué sexo se identifica?", lisRes9);
         public static Pregunta Preg7 { get; set; } = new Pregunta("El operador atendió rápido su llamado?", lisRes5);
-        public static Pregunta Preg2 { get; set; } = new Pregunta("Volvería a utilizar servicios de nuestra empresa?", lisRes6);
-        public static Pregunta Preg2 { get; set; } = new Pregunta("Qué tan satisfecho está con la atención del operador?", lisRes7);
+        public static Pregunta Preg8 { get; set; } = new Pregunta("Volvería a utilizar servicios de nuestra empresa?", lisRes6);
+        public static Pregunta Preg9 { get; set; } = new Pregunta("Qué tan satisfecho está con la atención del operador?", lisRes7);
 
         // LISTA DE PREGUNTAS
         static List<Pregunta> lisPreg1 = new List<Pregunta> { Preg1, Preg2, Preg8 };
