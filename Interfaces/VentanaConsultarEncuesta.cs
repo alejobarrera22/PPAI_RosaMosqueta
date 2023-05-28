@@ -97,6 +97,7 @@ namespace PPAI_RosaMosqueta
 
         public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual)
         {
+            gBox_Llamada.Visible = true;
             labelNombreCompleto.Visible = true;
             textNombreCompleto.Visible = true;
             textNombreCompleto.Text = nombreCliente;
