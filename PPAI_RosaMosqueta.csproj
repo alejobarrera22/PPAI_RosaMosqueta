@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Data\Data.cs" />
     <Compile Include="Entidades\CambioEstado.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Encuesta.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Llamada.cs" />

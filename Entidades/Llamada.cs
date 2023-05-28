@@ -10,9 +10,9 @@ namespace PPAI_RosaMosqueta.Entidades
     public class Llamada
     {
         public List<CambioEstado> cambioEstado { get; set; }
-        public List<RepuestaCliente> repuestasDeEncuesta { get; set; }
+        public List<RespuestaCliente> repuestasDeEncuesta { get; set; }
 
-
+        //constructor
         public Llamada(List<CambioEstado> cambioEstado)
         {
             this.cambioEstado = cambioEstado;

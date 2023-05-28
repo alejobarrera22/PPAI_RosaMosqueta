@@ -12,6 +12,7 @@ namespace PPAI_RosaMosqueta.Entidades
         private DateTime  fechaHoraInicio { get; set; }
         private Estado estado { get; set; }
 
+        //constructor
         public CambioEstado(DateTime fechaHoraInicio,DateTime fechaHoraHasta ,Estado estado)
         {
             this.fechaHoraInicio = fechaHoraInicio;
