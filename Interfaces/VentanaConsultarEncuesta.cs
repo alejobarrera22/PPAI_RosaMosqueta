@@ -61,6 +61,7 @@ namespace PPAI_RosaMosqueta
         {
             
             dataLlamadasEncontradas.Visible = true;
+            seleccioneLlamada.Visible = true;
             //para agregar valores a la tabla 
             dataLlamadasEncontradas.Rows.Clear();
             for (int i = 0; i < llamadasEncontradas.Count; i++)
@@ -86,6 +87,26 @@ namespace PPAI_RosaMosqueta
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tomarSeleccionLlamada(dataLlamadasEncontradas.CurrentRow.Index);
+        }
+
+        private void tomarSeleccionLlamada(int row)
+        {
+            gestor.llamadaSeleccionada(row);
+        }
+
+        public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual)
+        {
+            labelNombreCompleto.Visible = true;
+            textNombreCompleto.Visible = true;
+            textNombreCompleto.Text = nombreCliente;
+            labelDuracionLlamada.Visible = true;
+            textBoxDuracionLLamada.Visible = true;
+            textBoxDuracionLLamada.Text = duracion;
+            labelEstadoActualLlamada.Visible =true;
+            textBoxEstadoActualLLamada.Visible = true;
+            textBoxEstadoActualLLamada.Text = estadoActual;
+
 
         }
     }

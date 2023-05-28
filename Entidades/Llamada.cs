@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,8 +46,7 @@ namespace PPAI_RosaMosqueta.Entidades
         //las fechas de inicio de cada elemento de CambioEstado. Luego, se utiliza el método Min() para obtener la fecha mínima de la lista.
         public DateTime determinarEstadoInical()
         {
-            List<DateTime> fechasCreacion =
-                this.cambioEstado.Select(fechaHoraInicio => fechaHoraInicio.getFechaHoraIncio()).ToList();
+            List<DateTime> fechasCreacion = this.cambioEstado.Select(fechaHoraInicio => fechaHoraInicio.getFechaHoraIncio()).ToList();
             return fechasCreacion.Min();
         }
 
@@ -72,6 +72,30 @@ namespace PPAI_RosaMosqueta.Entidades
             return (repuestasDeEncuesta != null);
         }
 
+
+        public string getNombreClienteDeLLamada()
+        {
+            return cliente.getNombre();
+        }
+
+        public int getDuracion()
+        {
+            return duracion;
+        }
+
+        public string determinarUltimoEstado()
+        {
+            //// Ordenar la lista en orden descendente según la fechaHoraInicio
+            var ultimoEstado = cambioEstado.OrderByDescending(c => c.getFechaHoraIncio()).FirstOrDefault();
+            if (ultimoEstado != null)
+            {
+                //// Se encontró el último estado
+                // Accede a los atributos o propiedades del último estado si es necesario
+                return ultimoEstado.getNombreEstado();
+            }
+            return null;
+
+        }
     }
 
 }

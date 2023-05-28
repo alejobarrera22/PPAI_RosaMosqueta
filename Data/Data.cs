@@ -95,8 +95,9 @@ namespace PPAI_RosaMosqueta.Data
         private static List<RespuestaCliente> lisCli3 = new List<RespuestaCliente> { resCli7, resCli8, resCli9 };
 
         // CAMBIOS DE ESTADO
+        //aca el fechaHasta ya no lo usamos deberiamos borrarlo
         public static CambioEstado Cambio1Llamada1 { get; set; } = new CambioEstado(new DateTime(2023, 5, 27), new DateTime(2023, 5, 27), EstadoIniciada);
-        public static CambioEstado Cambio2Llamada1 { get; set; } = new CambioEstado(new DateTime(2023, 5, 27), new DateTime(2023, 5, 27), EstadoFinalizada);
+        public static CambioEstado Cambio2Llamada1 { get; set; } = new CambioEstado(new DateTime(2023, 5, 28), new DateTime(2023, 5, 27), EstadoFinalizada);
         public static CambioEstado Cambio1Llamada2 { get; set; } = new CambioEstado(new DateTime(2023, 5, 24), new DateTime(2023, 5, 24), EstadoIniciada);
         public static CambioEstado Cambio2Llamada2 { get; set; } = new CambioEstado(new DateTime(2023, 5, 24), new DateTime(2023, 5, 24), EstadoFinalizada);
         public static CambioEstado Cambio1Llamada3 { get; set; } = new CambioEstado(new DateTime(2023, 5, 20), new DateTime(2023, 5, 20), EstadoIniciada);
