@@ -23,9 +23,6 @@ namespace PPAI_RosaMosqueta.Gestor
         private string nombreCliente { get; set; }
         private string ultimoEstadoLlamada { get; set; }
         private string duracion { get; set; }
-        private Font printFont;
-        private StreamReader streamToPrint;
-        static string filePath;
         public GestorConsultarEncuesta(VentanaConsultarEncuesta pantalla)
         {
             this.pantallaConsultarEncuesta = pantalla;
@@ -135,11 +132,22 @@ namespace PPAI_RosaMosqueta.Gestor
         {
             string datosImprimir = "Nombre del Cliente: " + nombreCliente + 
                 "\nEstado Actual de la llamada: " + ultimoEstadoLlamada +
-                "\nDuración de la llamada: " + duracion + " segundos" +
-                seleccionadaLlamada.getRespuestas();
-            PrintDocument imprimir = new PrintDocument();
-            imprimir.DocumentName = "Encuesta seleccionada";
-            imprimir.Print();
+                "\nDuración de la llamada: " + duracion + " segundos\n\n\n RESPUESTAS SELECCIONADAS:\n\n" +
+                seleccionadaLlamada.getRespuestasImprimir();
+            PrintDocument p = new PrintDocument();
+            p.DocumentName = "Datos de la encuesta de la llamada seleccionada";
+            p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
+            {
+                e1.Graphics.DrawString(datosImprimir, new Font("Times New Roman", 24), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+            };
+            try
+            {
+                p.Print();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se pudo imprimir", ex);
+            }
         }
     }
 }

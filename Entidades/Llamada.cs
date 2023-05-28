@@ -97,6 +97,20 @@ namespace PPAI_RosaMosqueta.Entidades
             resps = nomEncuesta + concat;
             return resps;
         }
+        public string getRespuestasImprimir()
+        {
+            string resps = "";
+            string concat = "";
+            foreach (RespuestaCliente respuesta in repuestasDeEncuesta)
+            {
+                RespuestaPosible respuestaPosible = respuesta.respuestaSeleccionada;
+                Pregunta pregunta = respuestaPosible.pregunta;
+                Encuesta encuesta = pregunta.encuesta;
+                concat += "\n" + pregunta.getDescripcion() + "  ==>  " + respuestaPosible.getDrescripcionRta();
+            }
+            resps = concat;
+            return resps;
+        }
 
         public string getDatosCSV()
         {
