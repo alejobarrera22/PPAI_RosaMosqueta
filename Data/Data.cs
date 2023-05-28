@@ -23,28 +23,28 @@ namespace PPAI_RosaMosqueta.Data
         public static Estado EstadoCancelada { get; set; } = new Estado("Cancelada");
 
         // RESPUESTAS POSIBLES
-        public static RespuestaPosible ResPos1 { get; set; } = new RespuestaPosible("SI", 1);
-        public static RespuestaPosible ResPos2 { get; set; } = new RespuestaPosible("NO", 0);
-        public static RespuestaPosible ResPos3 { get; set; } = new RespuestaPosible("SI", 1);
-        public static RespuestaPosible ResPos4 { get; set; } = new RespuestaPosible("NO", 0);
-        public static RespuestaPosible ResPos5 { get; set; } = new RespuestaPosible("SI", 1);
-        public static RespuestaPosible ResPos6 { get; set; } = new RespuestaPosible("NO", 0);
-        public static RespuestaPosible ResPos7 { get; set; } = new RespuestaPosible("SI", 1);
-        public static RespuestaPosible ResPos8 { get; set; } = new RespuestaPosible("NO", 0);
-        public static RespuestaPosible ResPos9 { get; set; } = new RespuestaPosible("SI", 1);
-        public static RespuestaPosible ResPos10 { get; set; } = new RespuestaPosible("NO", 0);
-        public static RespuestaPosible ResPos11 { get; set; } = new RespuestaPosible("SI", 1);
-        public static RespuestaPosible ResPos12 { get; set; } = new RespuestaPosible("NO", 0);
-        public static RespuestaPosible ResPos13 { get; set; } = new RespuestaPosible("Muy insatisfecho", 0);
-        public static RespuestaPosible ResPos14 { get; set; } = new RespuestaPosible("Neutral", 1);
-        public static RespuestaPosible ResPos15 { get; set; } = new RespuestaPosible("Muy satisfecho", 2);
-        public static RespuestaPosible ResPos16 { get; set; } = new RespuestaPosible("Muy lento", 0);
-        public static RespuestaPosible ResPos17 { get; set; } = new RespuestaPosible("Normal", 1);
-        public static RespuestaPosible ResPos18 { get; set; } = new RespuestaPosible("Muy rápido", 2);
-        public static RespuestaPosible ResPos19 { get; set; } = new RespuestaPosible("Masculino", 0);
-        public static RespuestaPosible ResPos20 { get; set; } = new RespuestaPosible("Femenino", 1);
-        public static RespuestaPosible ResPos21 { get; set; } = new RespuestaPosible("Otro", 2);
-        public static RespuestaPosible ResPos22 { get; set; } = new RespuestaPosible("Prefiero no decirlo", 3);
+        public static RespuestaPosible ResPos1 { get; set; } = new RespuestaPosible("SI", 1, Preg1);
+        public static RespuestaPosible ResPos2 { get; set; } = new RespuestaPosible("NO", 0, Preg1);
+        public static RespuestaPosible ResPos3 { get; set; } = new RespuestaPosible("SI", 1, Preg2);
+        public static RespuestaPosible ResPos4 { get; set; } = new RespuestaPosible("NO", 0, Preg2);
+        public static RespuestaPosible ResPos5 { get; set; } = new RespuestaPosible("SI", 1, Preg4);
+        public static RespuestaPosible ResPos6 { get; set; } = new RespuestaPosible("NO", 0, Preg4);
+        public static RespuestaPosible ResPos7 { get; set; } = new RespuestaPosible("SI", 1, Preg5);
+        public static RespuestaPosible ResPos8 { get; set; } = new RespuestaPosible("NO", 0, Preg5);
+        public static RespuestaPosible ResPos9 { get; set; } = new RespuestaPosible("SI", 1, Preg7);
+        public static RespuestaPosible ResPos10 { get; set; } = new RespuestaPosible("NO", 0, Preg7);
+        public static RespuestaPosible ResPos11 { get; set; } = new RespuestaPosible("SI", 1, Preg8);
+        public static RespuestaPosible ResPos12 { get; set; } = new RespuestaPosible("NO", 0, Preg8);
+        public static RespuestaPosible ResPos13 { get; set; } = new RespuestaPosible("Muy insatisfecho", 0, Preg9);
+        public static RespuestaPosible ResPos14 { get; set; } = new RespuestaPosible("Neutral", 1, Preg9);
+        public static RespuestaPosible ResPos15 { get; set; } = new RespuestaPosible("Muy satisfecho", 2, Preg9);
+        public static RespuestaPosible ResPos16 { get; set; } = new RespuestaPosible("Muy lento", 0, Preg3);
+        public static RespuestaPosible ResPos17 { get; set; } = new RespuestaPosible("Normal", 1, Preg3);
+        public static RespuestaPosible ResPos18 { get; set; } = new RespuestaPosible("Muy rápido", 2, Preg3);
+        public static RespuestaPosible ResPos19 { get; set; } = new RespuestaPosible("Masculino", 0, Preg6);
+        public static RespuestaPosible ResPos20 { get; set; } = new RespuestaPosible("Femenino", 1, Preg6);
+        public static RespuestaPosible ResPos21 { get; set; } = new RespuestaPosible("Otro", 2, Preg6);
+        public static RespuestaPosible ResPos22 { get; set; } = new RespuestaPosible("Prefiero no decirlo", 3, Preg6);
 
         // LISTAS DE RESPUESTAS
         static List<RespuestaPosible> lisRes1 = new List<RespuestaPosible> { ResPos1, ResPos2 };
@@ -58,15 +58,15 @@ namespace PPAI_RosaMosqueta.Data
         static List<RespuestaPosible> lisRes9 = new List<RespuestaPosible> { ResPos19, ResPos20, ResPos21, ResPos22 };
 
         // PREGUNTAS
-        public static Pregunta Preg1 { get; set; } = new Pregunta("Se pudo solucionar su consulta?", lisRes1);
-        public static Pregunta Preg2 { get; set; } = new Pregunta("Es la primera vez que llama?", lisRes2);
-        public static Pregunta Preg3 { get; set; } = new Pregunta("Qué tan rápida fue la solución?", lisRes8);
-        public static Pregunta Preg4 { get; set; } = new Pregunta("El operador parecía estar interesado en ayudarle?", lisRes3);
-        public static Pregunta Preg5 { get; set; } = new Pregunta("El operador le trató respetuosamente?", lisRes4);
-        public static Pregunta Preg6 { get; set; } = new Pregunta("Con qué sexo se identifica?", lisRes9);
-        public static Pregunta Preg7 { get; set; } = new Pregunta("El operador atendió rápido su llamado?", lisRes5);
-        public static Pregunta Preg8 { get; set; } = new Pregunta("Volvería a utilizar servicios de nuestra empresa?", lisRes6);
-        public static Pregunta Preg9 { get; set; } = new Pregunta("Qué tan satisfecho está con la atención del operador?", lisRes7);
+        public static Pregunta Preg1 { get; set; } = new Pregunta("Se pudo solucionar su consulta?", lisRes1, Encuesta1);
+        public static Pregunta Preg2 { get; set; } = new Pregunta("Es la primera vez que llama?", lisRes2, Encuesta1);
+        public static Pregunta Preg3 { get; set; } = new Pregunta("Qué tan rápida fue la solución?", lisRes8, Encuesta2);
+        public static Pregunta Preg4 { get; set; } = new Pregunta("El operador parecía estar interesado en ayudarle?", lisRes3, Encuesta2);
+        public static Pregunta Preg5 { get; set; } = new Pregunta("El operador le trató respetuosamente?", lisRes4, Encuesta3);
+        public static Pregunta Preg6 { get; set; } = new Pregunta("Con qué sexo se identifica?", lisRes9, Encuesta3);
+        public static Pregunta Preg7 { get; set; } = new Pregunta("El operador atendió rápido su llamado?", lisRes5, Encuesta3);
+        public static Pregunta Preg8 { get; set; } = new Pregunta("Volvería a utilizar servicios de nuestra empresa?", lisRes6, Encuesta1);
+        public static Pregunta Preg9 { get; set; } = new Pregunta("Qué tan satisfecho está con la atención del operador?", lisRes7, Encuesta2);
 
         // LISTA DE PREGUNTAS
         public static List<Pregunta> listadoPreguntas = new List<Pregunta> { Preg1, Preg2, Preg3, Preg4, Preg5, Preg6, Preg7, Preg8, Preg9 };
