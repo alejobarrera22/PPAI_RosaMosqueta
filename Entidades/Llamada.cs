@@ -81,20 +81,22 @@ namespace PPAI_RosaMosqueta.Entidades
 
         }
 
-        public List<RespuestaCliente> getRespuestas(List<Pregunta> listadoPreguntas)
+        public string getRespuestas()
         {
-            List<RespuestaCliente> listadoRespuestas = new List<RespuestaCliente>();
-
+            //List<RespuestaCliente> listadoRespuestas = new List<RespuestaCliente>();
+            string resps = "";
+            string concat = "";
+            string nomEncuesta = "";
             foreach (RespuestaCliente respuesta in repuestasDeEncuesta)
             {
                 RespuestaPosible respuestaPosible = respuesta.respuestaSeleccionada;
-
-                foreach (var pregunta in listadoPreguntas)
-                {
-                    
-                }
+                Pregunta pregunta = respuestaPosible.pregunta;
+                Encuesta encuesta = pregunta.encuesta;
+                nomEncuesta = encuesta.getDescripcionEncuesta();
+                concat += "\n" + pregunta.getDescripcion() + "  ==>  " + respuestaPosible.getDrescripcionRta();
             }
-            return listadoRespuestas;
+            resps = nomEncuesta + concat;
+            return resps;
         }
     }
 

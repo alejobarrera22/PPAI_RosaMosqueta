@@ -10,7 +10,7 @@ namespace PPAI_RosaMosqueta.Entidades
     {
         private string pregunta { get; set; }
         private List<RespuestaPosible> repuestas { get; set; }
-        private Encuesta encuesta { get; set; }
+        public Encuesta encuesta { get; set; }
 
         //constructor
         public Pregunta(string pregunta, List<RespuestaPosible> repuestas, Encuesta dependencia)

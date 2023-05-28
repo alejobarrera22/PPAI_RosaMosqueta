@@ -68,8 +68,10 @@ namespace PPAI_RosaMosqueta.Gestor
             Console.WriteLine(duracion);
             string estadoActual = llamadaSeleccionada.determinarUltimoEstado();
             Console.WriteLine(estadoActual);
+            Console.WriteLine(Data.Data.ResPos2.getDrescripcionRta());
             //Falta obtener las preguntas y repuestas,etc
-            //List<RespuestaCliente> respuestasSeleccionadas = llamadaSeleccionada.getRespuestas(listadoPreguntas);
+            string datosEncuesta = llamadaSeleccionada.getRespuestas();
+            Console.WriteLine(datosEncuesta);
 
             pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, estadoActual);
         }
