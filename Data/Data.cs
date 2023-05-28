@@ -124,5 +124,19 @@ namespace PPAI_RosaMosqueta.Data
             "detalle generico 4", 175, false, "No requiere registrar observación");
         public static Llamada Llamada5 { get; set; } = new Llamada(lisCam5, null, Cliente4, "descripcion generica 5",
             "detalle generico 5", 25, false, "Cancela la llamada");
+
+        //lista de llamadas
+        public static List<Llamada> listaDeLLamadas()
+        {
+            List<Llamada> listaLlamadas = new List<Llamada>();
+
+            listaLlamadas.Add(Llamada1);
+            listaLlamadas.Add(Llamada2);
+            listaLlamadas.Add(Llamada3);
+            listaLlamadas.Add(Llamada4);
+            listaLlamadas.Add(Llamada5);
+            return listaLlamadas;
+
+        }
     }
 }

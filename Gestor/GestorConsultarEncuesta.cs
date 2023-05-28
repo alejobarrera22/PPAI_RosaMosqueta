@@ -33,18 +33,22 @@ namespace PPAI_RosaMosqueta.Gestor
 
         public void filtrarPorPeridoYRepuestas(DateTime fechaDesde, DateTime fechaHasta)
         {
-            //llamadasEncontradas = new List<Llamada>();
-            //foreach (var llamada in llamadas)
-            //{
-            //    if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
-            //    {
-            //        llamadasEncontradas.Add(llamada);
-            //    }
-            //}
+            llamadasEncontradas = new List<Llamada>();
+            //no se me ocurrio otra forma para mostrala osino no me deja pasarle como parametro
+            List<string> llamadasEncontradasMostrar = new List<string>();
+            //aca saco del data la lista de llamadas
+            foreach (var llamada in Data.Data.listaDeLLamadas())
+            {
+                if (llamada.esDePerido(fechaDesde, fechaHasta))
+                {
+                 llamadasEncontradas.Add(llamada);
+                 llamadasEncontradasMostrar.Add(llamada.ToString()); 
+                }
+            }
 
 
             //aca en verdad tendrian que pasarle como parametro las llamadas, para que solamente cuente cuantas hay y mostrarlas en la grilla
-            pantallaConsultarEncuesta.pedirSeleccionLLamada();
+            pantallaConsultarEncuesta.pedirSeleccionLLamada(llamadasEncontradasMostrar);
         }
     }
 }

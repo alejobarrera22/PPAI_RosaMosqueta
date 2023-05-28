@@ -57,17 +57,17 @@ namespace PPAI_RosaMosqueta
             gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
         }
 
-        public void pedirSeleccionLLamada()
+        public void pedirSeleccionLLamada(List<string> llamadasEncontradas)
         {
             
             dataLlamadasEncontradas.Visible = true;
             //para agregar valores a la tabla 
             dataLlamadasEncontradas.Rows.Clear();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < llamadasEncontradas.Count; i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 DataGridViewCell cell1 = new DataGridViewTextBoxCell();
-                cell1.Value = "a";
+                cell1.Value = "Llamada "+i;
                 row.Cells.Add(cell1);
 
                 dataLlamadasEncontradas.Rows.Add(row);
