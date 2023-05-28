@@ -48,9 +48,9 @@
             this.gBox_Llamada = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.gBox_Encuesta = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btn_CSV = new System.Windows.Forms.Button();
+            this.btn_imprimir = new System.Windows.Forms.Button();
             this.gBox_Periodo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLlamadasEncontradas)).BeginInit();
             this.gBox_Llamada.SuspendLayout();
@@ -282,7 +282,6 @@
             this.gBox_Llamada.TabStop = false;
             this.gBox_Llamada.Text = "Llamada Seleccionada";
             this.gBox_Llamada.Visible = false;
-            this.gBox_Llamada.Enter += new System.EventHandler(this.gBox_Llamada_Enter);
             // 
             // button1
             // 
@@ -300,9 +299,7 @@
             // gBox_Encuesta
             // 
             this.gBox_Encuesta.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.gBox_Encuesta.Controls.Add(this.label1);
             this.gBox_Encuesta.Controls.Add(this.label2);
-            this.gBox_Encuesta.Controls.Add(this.label3);
             this.gBox_Encuesta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gBox_Encuesta.Location = new System.Drawing.Point(27, 547);
             this.gBox_Encuesta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -313,18 +310,6 @@
             this.gBox_Encuesta.TabStop = false;
             this.gBox_Encuesta.Text = "Encuesta";
             this.gBox_Encuesta.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(9, 114);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 16);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Estado Actual Llamada";
-            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -339,17 +324,27 @@
             this.label2.Text = "Nombre Encuesta";
             this.label2.Visible = false;
             // 
-            // label3
+            // btn_CSV
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(7, 83);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Duracion LLamada";
-            this.label3.Visible = false;
+            this.btn_CSV.Location = new System.Drawing.Point(27, 795);
+            this.btn_CSV.Name = "btn_CSV";
+            this.btn_CSV.Size = new System.Drawing.Size(96, 31);
+            this.btn_CSV.TabIndex = 18;
+            this.btn_CSV.Text = "Generar CSV";
+            this.btn_CSV.UseVisualStyleBackColor = true;
+            this.btn_CSV.Visible = false;
+            this.btn_CSV.Click += new System.EventHandler(this.btn_CSV_Click);
+            // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.Location = new System.Drawing.Point(140, 795);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(100, 31);
+            this.btn_imprimir.TabIndex = 19;
+            this.btn_imprimir.Text = "Imprimir";
+            this.btn_imprimir.UseVisualStyleBackColor = true;
+            this.btn_imprimir.Visible = false;
+            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
             // 
             // VentanaConsultarEncuesta
             // 
@@ -359,7 +354,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.CancelButton = this.btn_Cancelar;
-            this.ClientSize = new System.Drawing.Size(1000, 757);
+            this.ClientSize = new System.Drawing.Size(1005, 838);
+            this.Controls.Add(this.btn_imprimir);
+            this.Controls.Add(this.btn_CSV);
             this.Controls.Add(this.gBox_Encuesta);
             this.Controls.Add(this.seleccioneLlamada);
             this.Controls.Add(this.dataLlamadasEncontradas);
@@ -413,9 +410,9 @@
         private System.Windows.Forms.GroupBox gBox_Llamada;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox gBox_Encuesta;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_CSV;
+        private System.Windows.Forms.Button btn_imprimir;
     }
 }
 

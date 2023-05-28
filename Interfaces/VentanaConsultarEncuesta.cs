@@ -111,12 +111,18 @@ namespace PPAI_RosaMosqueta
             gBox_Encuesta.Visible = true;
             label2.Visible = true;
             label2.Text = "Nombre de la encuesta: " + respuestas;
+            btn_CSV.Visible = true;
+            btn_imprimir.Visible = true;
         }
 
-        private void gBox_Llamada_Enter(object sender, EventArgs e)
+        private void btn_CSV_Click(object sender, EventArgs e)
         {
-
+            gestor.generarCSV();
         }
 
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            gestor.imprimir();
+        }
     }
 }

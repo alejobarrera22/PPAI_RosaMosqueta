@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PPAI_RosaMosqueta.Entidades;
+using PPAI_RosaMosqueta.Interfaces;
 
 namespace PPAI_RosaMosqueta.Gestor
 {
@@ -14,6 +19,13 @@ namespace PPAI_RosaMosqueta.Gestor
         private DateTime fechaHasta { get; set; }
         private List<Llamada> llamadas { get; set; } //= new List<Llamada>(); polque?
         private List<Llamada> llamadasEncontradas { get; set; }
+        private Llamada seleccionadaLlamada { get; set; }
+        private string nombreCliente { get; set; }
+        private string ultimoEstadoLlamada { get; set; }
+        private string duracion { get; set; }
+        private Font printFont;
+        private StreamReader streamToPrint;
+        static string filePath;
         public GestorConsultarEncuesta(VentanaConsultarEncuesta pantalla)
         {
             this.pantallaConsultarEncuesta = pantalla;
@@ -57,17 +69,18 @@ namespace PPAI_RosaMosqueta.Gestor
         {
             //se auto invoca para obtener todos los datoas y de la lista antes creada llamadasEncontrada le pasa la especifica gracias al [index]
             getDatosLLamada(llamadasEncontradas[row]);
+            this.seleccionadaLlamada = llamadasEncontradas[row];
         }
 
         //obtiene los datos necesarios de la Llamada selecionada
         public void getDatosLLamada(Llamada llamadaSeleccionada)
         {
-            string nombreCliente = llamadaSeleccionada.getNombreClienteDeLLamada();
+            nombreCliente = llamadaSeleccionada.getNombreClienteDeLLamada();
             Console.WriteLine(nombreCliente);
-            string duracion = llamadaSeleccionada.getDuracion().ToString();
+            duracion = llamadaSeleccionada.getDuracion().ToString();
             Console.WriteLine(duracion);
-            string estadoActual = llamadaSeleccionada.determinarUltimoEstado();
-            Console.WriteLine(estadoActual);
+            ultimoEstadoLlamada = llamadaSeleccionada.determinarUltimoEstado();
+            Console.WriteLine(ultimoEstadoLlamada);
 
             // GENERADOR DE DEPENDENCIAS
             Data.Data.ResPos1.pregunta = Data.Data.Preg1;
@@ -107,7 +120,26 @@ namespace PPAI_RosaMosqueta.Gestor
             string datosEncuesta = llamadaSeleccionada.getRespuestas();
             //Console.WriteLine(datosEncuesta);
 
-            pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, estadoActual, datosEncuesta);
+            pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, ultimoEstadoLlamada, datosEncuesta);
+        }
+
+        public void generarCSV()
+        {
+            string datosEncabezado = nombreCliente + ";" + ultimoEstadoLlamada + ";" + duracion;
+            string datosCSV = seleccionadaLlamada.getDatosCSV();
+            ILlamadaCSV interfazCSV = new ILlamadaCSV(datosCSV, datosEncabezado);
+            interfazCSV.generarCSV();
+        }
+
+        public void imprimir()
+        {
+            string datosImprimir = "Nombre del Cliente: " + nombreCliente + 
+                "\nEstado Actual de la llamada: " + ultimoEstadoLlamada +
+                "\nDuración de la llamada: " + duracion + " segundos" +
+                seleccionadaLlamada.getRespuestas();
+            PrintDocument imprimir = new PrintDocument();
+            imprimir.DocumentName = "Encuesta seleccionada";
+            imprimir.Print();
         }
     }
 }

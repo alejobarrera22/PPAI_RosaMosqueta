@@ -83,7 +83,6 @@ namespace PPAI_RosaMosqueta.Entidades
 
         public string getRespuestas()
         {
-            //List<RespuestaCliente> listadoRespuestas = new List<RespuestaCliente>();
             string resps = "";
             string concat = "";
             string nomEncuesta = "";
@@ -96,6 +95,20 @@ namespace PPAI_RosaMosqueta.Entidades
                 concat += "\n" + pregunta.getDescripcion() + "  ==>  " + respuestaPosible.getDrescripcionRta();
             }
             resps = nomEncuesta + concat;
+            return resps;
+        }
+
+        public string getDatosCSV()
+        {
+            string resps = "\"Descripción de la pregunta\";\"Descripción de la respuesta seleccionada\"";
+            string concat = "";
+            foreach (RespuestaCliente respuesta in repuestasDeEncuesta)
+            {
+                RespuestaPosible respuestaPosible = respuesta.respuestaSeleccionada;
+                Pregunta pregunta = respuestaPosible.pregunta;
+                concat += "\n" + pregunta.getDescripcion() + ";" + respuestaPosible.getDrescripcionRta();
+            }
+            resps += concat;
             return resps;
         }
     }
