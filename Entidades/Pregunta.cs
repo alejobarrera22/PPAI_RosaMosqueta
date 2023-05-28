@@ -9,11 +9,11 @@ namespace PPAI_RosaMosqueta.Entidades
     public class Pregunta
     {
         private string pregunta { get; set; }
-        private List<RepuestaPosible> repuestas { get; set; }
+        private List<RespuestaPosible> repuestas { get; set; }
 
 
         //constructor
-        public Pregunta(string pregunta, List<RepuestaPosible> repuestas)
+        public Pregunta(string pregunta, List<RespuestaPosible> repuestas)
         {
             this.pregunta = pregunta;
             this.repuestas = repuestas;
