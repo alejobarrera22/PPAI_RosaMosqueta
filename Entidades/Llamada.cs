@@ -92,7 +92,7 @@ namespace PPAI_RosaMosqueta.Entidades
                 RespuestaPosible respuestaPosible = respuesta.respuestaSeleccionada;
                 Pregunta pregunta = respuestaPosible.pregunta;
                 Encuesta encuesta = pregunta.encuesta;
-                nomEncuesta = encuesta.getDescripcionEncuesta();
+                nomEncuesta = encuesta.getDescripcionEncuesta() + "\n\n\n RESPUESTAS SELECCIONADAS:\n";
                 concat += "\n" + pregunta.getDescripcion() + "  ==>  " + respuestaPosible.getDrescripcionRta();
             }
             resps = nomEncuesta + concat;

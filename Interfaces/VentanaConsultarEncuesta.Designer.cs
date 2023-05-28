@@ -149,7 +149,7 @@
             // 
             this.opcionConsultarEncuesta.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.opcionConsultarEncuesta.Location = new System.Drawing.Point(27, 36);
-            this.opcionConsultarEncuesta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.opcionConsultarEncuesta.Margin = new System.Windows.Forms.Padding(4);
             this.opcionConsultarEncuesta.Name = "opcionConsultarEncuesta";
             this.opcionConsultarEncuesta.Size = new System.Drawing.Size(188, 28);
             this.opcionConsultarEncuesta.TabIndex = 7;
@@ -168,7 +168,7 @@
             this.dataLlamadasEncontradas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.llamadas});
             this.dataLlamadasEncontradas.Location = new System.Drawing.Point(27, 306);
-            this.dataLlamadasEncontradas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataLlamadasEncontradas.Margin = new System.Windows.Forms.Padding(4);
             this.dataLlamadasEncontradas.Name = "dataLlamadasEncontradas";
             this.dataLlamadasEncontradas.RowHeadersWidth = 92;
             this.dataLlamadasEncontradas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -199,7 +199,7 @@
             // textNombreCompleto
             // 
             this.textNombreCompleto.Location = new System.Drawing.Point(193, 39);
-            this.textNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNombreCompleto.Margin = new System.Windows.Forms.Padding(4);
             this.textNombreCompleto.Name = "textNombreCompleto";
             this.textNombreCompleto.ReadOnly = true;
             this.textNombreCompleto.Size = new System.Drawing.Size(253, 22);
@@ -233,7 +233,7 @@
             // textBoxDuracionLLamada
             // 
             this.textBoxDuracionLLamada.Location = new System.Drawing.Point(193, 105);
-            this.textBoxDuracionLLamada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDuracionLLamada.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDuracionLLamada.Name = "textBoxDuracionLLamada";
             this.textBoxDuracionLLamada.ReadOnly = true;
             this.textBoxDuracionLLamada.Size = new System.Drawing.Size(253, 22);
@@ -243,7 +243,7 @@
             // textBoxEstadoActualLLamada
             // 
             this.textBoxEstadoActualLLamada.Location = new System.Drawing.Point(193, 170);
-            this.textBoxEstadoActualLLamada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEstadoActualLLamada.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEstadoActualLLamada.Name = "textBoxEstadoActualLLamada";
             this.textBoxEstadoActualLLamada.ReadOnly = true;
             this.textBoxEstadoActualLLamada.Size = new System.Drawing.Size(253, 22);
@@ -329,11 +329,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(7, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 16);
+            this.label2.Size = new System.Drawing.Size(158, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre Encuesta";
             this.label2.Visible = false;

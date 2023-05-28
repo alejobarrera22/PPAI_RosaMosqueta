@@ -68,12 +68,46 @@ namespace PPAI_RosaMosqueta.Gestor
             Console.WriteLine(duracion);
             string estadoActual = llamadaSeleccionada.determinarUltimoEstado();
             Console.WriteLine(estadoActual);
-            Console.WriteLine(Data.Data.ResPos2.getDrescripcionRta());
+
+            // GENERADOR DE DEPENDENCIAS
+            Data.Data.ResPos1.pregunta = Data.Data.Preg1;
+            Data.Data.ResPos2.pregunta = Data.Data.Preg1;
+            Data.Data.ResPos3.pregunta = Data.Data.Preg2;
+            Data.Data.ResPos4.pregunta = Data.Data.Preg2;
+            Data.Data.ResPos5.pregunta = Data.Data.Preg4;
+            Data.Data.ResPos6.pregunta = Data.Data.Preg4;
+            Data.Data.ResPos7.pregunta = Data.Data.Preg5;
+            Data.Data.ResPos8.pregunta = Data.Data.Preg5;
+            Data.Data.ResPos9.pregunta = Data.Data.Preg7;
+            Data.Data.ResPos10.pregunta = Data.Data.Preg7;
+            Data.Data.ResPos11.pregunta = Data.Data.Preg8;
+            Data.Data.ResPos12.pregunta = Data.Data.Preg8;
+            Data.Data.ResPos13.pregunta = Data.Data.Preg9;
+            Data.Data.ResPos14.pregunta = Data.Data.Preg9;
+            Data.Data.ResPos15.pregunta = Data.Data.Preg9;
+            Data.Data.ResPos16.pregunta = Data.Data.Preg3;
+            Data.Data.ResPos17.pregunta = Data.Data.Preg3;
+            Data.Data.ResPos18.pregunta = Data.Data.Preg3;
+            Data.Data.ResPos19.pregunta = Data.Data.Preg6;
+            Data.Data.ResPos20.pregunta = Data.Data.Preg6;
+            Data.Data.ResPos21.pregunta = Data.Data.Preg6;
+            Data.Data.ResPos22.pregunta = Data.Data.Preg6;
+
+            Data.Data.Preg1.encuesta = Data.Data.Encuesta1;
+            Data.Data.Preg2.encuesta = Data.Data.Encuesta1;
+            Data.Data.Preg3.encuesta = Data.Data.Encuesta2;
+            Data.Data.Preg4.encuesta = Data.Data.Encuesta2;
+            Data.Data.Preg5.encuesta = Data.Data.Encuesta3;
+            Data.Data.Preg6.encuesta = Data.Data.Encuesta3;
+            Data.Data.Preg7.encuesta = Data.Data.Encuesta3;
+            Data.Data.Preg8.encuesta = Data.Data.Encuesta1;
+            Data.Data.Preg9.encuesta = Data.Data.Encuesta2;
+
             //Falta obtener las preguntas y repuestas,etc
             string datosEncuesta = llamadaSeleccionada.getRespuestas();
-            Console.WriteLine(datosEncuesta);
+            //Console.WriteLine(datosEncuesta);
 
-            pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, estadoActual);
+            pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, estadoActual, datosEncuesta);
         }
     }
 }

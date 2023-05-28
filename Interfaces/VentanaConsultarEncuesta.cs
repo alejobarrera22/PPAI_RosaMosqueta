@@ -95,7 +95,7 @@ namespace PPAI_RosaMosqueta
             gestor.llamadaSeleccionada(row);
         }
 
-        public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual)
+        public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual, string respuestas)
         {
             gBox_Llamada.Visible = true;
             labelNombreCompleto.Visible = true;
@@ -108,7 +108,9 @@ namespace PPAI_RosaMosqueta
             textBoxEstadoActualLLamada.Visible = true;
             textBoxEstadoActualLLamada.Text = estadoActual;
 
-
+            gBox_Encuesta.Visible = true;
+            label2.Visible = true;
+            label2.Text = "Nombre de la encuesta: " + respuestas;
         }
 
         private void gBox_Llamada_Enter(object sender, EventArgs e)
