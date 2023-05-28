@@ -8,9 +8,9 @@ namespace PPAI_RosaMosqueta.Entidades
 {
     public class Cliente
     {
-        private int dni { get; set};
-        private string nombreCompleto { get; set};
-        private int nroCelular { get; set};
+        private int dni { get; set;}
+        private string nombreCompleto { get; set;}
+        private int nroCelular { get; set;}
 
         public Cliente(int documento, string nombre, int numero)
         {
@@ -19,4 +19,4 @@ namespace PPAI_RosaMosqueta.Entidades
             this.nroCelular = numero;
         }
 
-}
+    }

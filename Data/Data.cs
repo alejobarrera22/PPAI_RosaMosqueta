@@ -79,32 +79,32 @@ namespace PPAI_RosaMosqueta.Data
         public static Encuesta Encuesta3 { get; set; } = new Encuesta("Sobre el operador", new DateTime(2024, 5, 22), lisPreg3);
 
         // RESPUESTAS DEL CLIENTE
-        public static RespuestaCliente resCli1 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 27), ResPos1);
-        public static RespuestaCliente resCli2 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 27), ResPos3);
-        public static RespuestaCliente resCli3 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 27), ResPos17);
-        public static RespuestaCliente resCli4 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 24), ResPos6);
-        public static RespuestaCliente resCli5 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 24), ResPos7);
-        public static RespuestaCliente resCli6 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 24), ResPos22);
-        public static RespuestaCliente resCli7 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 20), ResPos9);
-        public static RespuestaCliente resCli8 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 20), ResPos11);
-        public static RespuestaCliente resCli9 { get; set } = new RespuestaCliente(new DateTime(2023, 5, 20), ResPos15);
+        public static RespuestaCliente resCli1 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 27), ResPos1);
+        public static RespuestaCliente resCli2 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 27), ResPos3);
+        public static RespuestaCliente resCli3 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 27), ResPos17);
+        public static RespuestaCliente resCli4 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 24), ResPos6);
+        public static RespuestaCliente resCli5 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 24), ResPos7);
+        public static RespuestaCliente resCli6 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 24), ResPos22);
+        public static RespuestaCliente resCli7 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 20), ResPos9);
+        public static RespuestaCliente resCli8 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 20), ResPos11);
+        public static RespuestaCliente resCli9 { get; set; } = new RespuestaCliente(new DateTime(2023, 5, 20), ResPos15);
 
         // LISTA DE RESPUESTAS DEL CLIENTE
-        static List<RespuestaCliente> lisCli1 = new List<RespuestaCliente> { resCli1, resCli2, resCli3 }
-        static List<RespuestaCliente> lisCli2 = new List<RespuestaCliente> { resCli4, resCli5, resCli6 }
-        static List<RespuestaCliente> lisCli3 = new List<RespuestaCliente> { resCli7, resCli8, resCli9 }
+        private static List<RespuestaCliente> lisCli1 = new List<RespuestaCliente> { resCli1, resCli2, resCli3 };
+        private static List<RespuestaCliente> lisCli2 = new List<RespuestaCliente> { resCli4, resCli5, resCli6 };
+        private static List<RespuestaCliente> lisCli3 = new List<RespuestaCliente> { resCli7, resCli8, resCli9 };
 
         // CAMBIOS DE ESTADO
-        public static CambioEstado Cambio1Llamada1 { get; set } = new CambioEstado(new DateTime(2023, 5, 27), new DateTime(2023, 5, 27), EstadoIniciada);
-        public static CambioEstado Cambio2Llamada1 { get; set } = new CambioEstado(new DateTime(2023, 5, 27), new DateTime(2023, 5, 27), EstadoFinalizada);
-        public static CambioEstado Cambio1Llamada2 { get; set } = new CambioEstado(new DateTime(2023, 5, 24), new DateTime(2023, 5, 24), EstadoIniciada);
-        public static CambioEstado Cambio2Llamada2 { get; set } = new CambioEstado(new DateTime(2023, 5, 24), new DateTime(2023, 5, 24), EstadoFinalizada);
-        public static CambioEstado Cambio1Llamada3 { get; set } = new CambioEstado(new DateTime(2023, 5, 20), new DateTime(2023, 5, 20), EstadoIniciada);
-        public static CambioEstado Cambio2Llamada3 { get; set } = new CambioEstado(new DateTime(2023, 5, 20), new DateTime(2023, 5, 20), EstadoFinalizada);
-        public static CambioEstado Cambio1Llamada4 { get; set } = new CambioEstado(new DateTime(2023, 5, 26), new DateTime(2023, 5, 26), EstadoIniciada);
-        public static CambioEstado Cambio2Llamada4 { get; set } = new CambioEstado(new DateTime(2023, 5, 26), new DateTime(2023, 5, 26), EstadoFinalizada);
-        public static CambioEstado Cambio1Llamada5 { get; set } = new CambioEstado(new DateTime(2023, 5, 21), new DateTime(2023, 5, 21), EstadoIniciada);
-        public static CambioEstado Cambio2Llamada5 { get; set } = new CambioEstado(new DateTime(2023, 5, 21), new DateTime(2023, 5, 21), EstadoCancelada);
+        public static CambioEstado Cambio1Llamada1 { get; set; } = new CambioEstado(new DateTime(2023, 5, 27), new DateTime(2023, 5, 27), EstadoIniciada);
+        public static CambioEstado Cambio2Llamada1 { get; set; } = new CambioEstado(new DateTime(2023, 5, 27), new DateTime(2023, 5, 27), EstadoFinalizada);
+        public static CambioEstado Cambio1Llamada2 { get; set; } = new CambioEstado(new DateTime(2023, 5, 24), new DateTime(2023, 5, 24), EstadoIniciada);
+        public static CambioEstado Cambio2Llamada2 { get; set; } = new CambioEstado(new DateTime(2023, 5, 24), new DateTime(2023, 5, 24), EstadoFinalizada);
+        public static CambioEstado Cambio1Llamada3 { get; set; } = new CambioEstado(new DateTime(2023, 5, 20), new DateTime(2023, 5, 20), EstadoIniciada);
+        public static CambioEstado Cambio2Llamada3 { get; set; } = new CambioEstado(new DateTime(2023, 5, 20), new DateTime(2023, 5, 20), EstadoFinalizada);
+        public static CambioEstado Cambio1Llamada4 { get; set; } = new CambioEstado(new DateTime(2023, 5, 26), new DateTime(2023, 5, 26), EstadoIniciada);
+        public static CambioEstado Cambio2Llamada4 { get; set; } = new CambioEstado(new DateTime(2023, 5, 26), new DateTime(2023, 5, 26), EstadoFinalizada);
+        public static CambioEstado Cambio1Llamada5 { get; set; } = new CambioEstado(new DateTime(2023, 5, 21), new DateTime(2023, 5, 21), EstadoIniciada);
+        public static CambioEstado Cambio2Llamada5 { get; set; } = new CambioEstado(new DateTime(2023, 5, 21), new DateTime(2023, 5, 21), EstadoCancelada);
 
         // LISTA DE CAMBIOS DE ESTADO
         static List<CambioEstado> lisCam1 = new List<CambioEstado> { Cambio1Llamada1, Cambio2Llamada1 };
