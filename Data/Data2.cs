@@ -8,7 +8,7 @@ using PPAI_RosaMosqueta.Entidades;
 
 namespace PPAI_RosaMosqueta.Data
 {
-    public class Data
+    public class Data2
     {
         private List<Estado> estados;
         private List<CambioEstado> cambiosEstados;

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Data.cs" />
     <Compile Include="Data\Data2.cs" />
     <Compile Include="Entidades\CambioEstado.cs" />
     <Compile Include="Entidades\Cliente.cs" />
