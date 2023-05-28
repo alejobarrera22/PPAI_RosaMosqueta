@@ -67,7 +67,9 @@ namespace PPAI_RosaMosqueta.Entidades
         //devolvera True si la tiene repuestasDeEncuasta, es decir la lista de repuestas no esta vacia
         public bool tieneRtas()
         {
-            return repuestasDeEncuesta.Count > 0;
+            // no funca el respuesDeEncuesta.Count > 0 (creo que da error al compralo con null) lo podemos dejar asi, o en el Data darle en vez de null darle [](array vacio)
+            //asi andaria en el caso que no tenga repuestas
+            return (repuestasDeEncuesta != null);
         }
 
     }

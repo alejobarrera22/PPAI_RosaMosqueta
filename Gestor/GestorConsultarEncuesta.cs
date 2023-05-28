@@ -39,7 +39,7 @@ namespace PPAI_RosaMosqueta.Gestor
             //aca saco del data la lista de llamadas
             foreach (var llamada in Data.Data.listaDeLLamadas())
             {
-                if (llamada.esDePerido(fechaDesde, fechaHasta))
+                if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
                 {
                  llamadasEncontradas.Add(llamada);
                  llamadasEncontradasMostrar.Add(llamada.ToString()); 
