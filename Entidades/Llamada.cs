@@ -81,9 +81,20 @@ namespace PPAI_RosaMosqueta.Entidades
 
         }
 
-        public List<RespuestaCliente> getRespuestas()
+        public List<RespuestaCliente> getRespuestas(List<Pregunta> listadoPreguntas)
         {
-            return true;
+            List<RespuestaCliente> listadoRespuestas = new List<RespuestaCliente>();
+
+            foreach (RespuestaCliente respuesta in repuestasDeEncuesta)
+            {
+                RespuestaPosible respuestaPosible = respuesta.respuestaSeleccionada;
+
+                foreach (var pregunta in listadoPreguntas)
+                {
+                    
+                }
+            }
+            return listadoRespuestas;
         }
     }
 

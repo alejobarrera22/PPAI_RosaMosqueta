@@ -9,7 +9,7 @@ namespace PPAI_RosaMosqueta.Entidades
     public class RespuestaCliente
     {
         private DateTime fechaEncuesta { get; set; }
-        private RespuestaPosible respuestaSeleccionada { get; set;}
+        public RespuestaPosible respuestaSeleccionada { get; set;}
 
         public RespuestaCliente(DateTime fechaEncuesta, RespuestaPosible respuestaSeleccionada)
         {
