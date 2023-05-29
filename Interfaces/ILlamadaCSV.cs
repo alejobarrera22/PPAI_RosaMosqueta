@@ -18,7 +18,7 @@ namespace PPAI_RosaMosqueta.Interfaces
             this.encabezado = encabezado;
         }
 
-        public void generarCSV()
+        public void crearCSV()
         {
             // Ruta del archivo
             string ruta = "../../../encuesta.csv";

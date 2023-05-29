@@ -119,12 +119,12 @@ namespace PPAI_RosaMosqueta.Gestor
             pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, ultimoEstadoLlamada, datosEncuesta);
         }
 
-        public void generarCSV()
+        public void seleccionGenerarCSV()
         {
             string datosEncabezado = nombreCliente + ";" + ultimoEstadoLlamada + ";" + duracion;
             string datosCSV = seleccionadaLlamada.getDatosCSV();
             ILlamadaCSV interfazCSV = new ILlamadaCSV(datosCSV, datosEncabezado);
-            interfazCSV.generarCSV();
+            interfazCSV.crearCSV();
         }
 
         public void imprimir()

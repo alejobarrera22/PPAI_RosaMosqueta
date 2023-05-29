@@ -105,7 +105,12 @@ namespace PPAI_RosaMosqueta
 
         private void btn_CSV_Click(object sender, EventArgs e)
         {
-            gestor.generarCSV();
+            tomarSeleccionGenerarCSV();
+        }
+
+        private void tomarSeleccionGenerarCSV()
+        {
+            gestor.seleccionGenerarCSV();
         }
 
         private void btn_imprimir_Click(object sender, EventArgs e)
