@@ -65,21 +65,11 @@ namespace PPAI_RosaMosqueta
             {
                 DataGridViewRow row = new DataGridViewRow();
                 DataGridViewCell cell1 = new DataGridViewTextBoxCell();
-                cell1.Value = "Llamada "+i;
+                cell1.Value = "Llamada "+(i+1);
                 row.Cells.Add(cell1);
 
                 dataLlamadasEncontradas.Rows.Add(row);
             }
-        }
-
-        private void date_Desde_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -78,7 +78,6 @@
             this.dateDesde.UseWaitCursor = true;
             this.dateDesde.Value = new System.DateTime(2023, 5, 26, 0, 0, 0, 0);
             this.dateDesde.Visible = false;
-            this.dateDesde.ValueChanged += new System.EventHandler(this.date_Desde_ValueChanged);
             // 
             // dateHasta
             // 
@@ -89,7 +88,6 @@
             this.dateHasta.TabIndex = 3;
             this.dateHasta.UseWaitCursor = true;
             this.dateHasta.Visible = false;
-            this.dateHasta.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // lbl_Hasta
             // 

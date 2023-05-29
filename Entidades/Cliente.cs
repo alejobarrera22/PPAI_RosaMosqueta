@@ -19,6 +19,9 @@ namespace PPAI_RosaMosqueta.Entidades
             this.nroCelular = numero;
         }
 
-        public string getNombre() { return nombreCompleto; }
+        public string getNombre() 
+        {
+            return nombreCompleto; 
+        }
     }
 }

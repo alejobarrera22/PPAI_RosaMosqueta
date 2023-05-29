@@ -43,16 +43,15 @@ namespace PPAI_RosaMosqueta.Gestor
         public void filtrarPorPeridoYRepuestas(DateTime fechaDesde, DateTime fechaHasta)
         {
             llamadasEncontradas = new List<Llamada>();
-            //no se me ocurrio otra forma para mostrala osino no me deja pasarle como parametro
             List<string> llamadasEncontradasMostrar = new List<string>();
-            //aca saco del data la lista de llamadas
+            //aca sacamos del data la lista de llamadas
             foreach (var llamada in Data.Data.listaDeLLamadas())
             {
                 if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
                 {
-                    //Me sirve para luego seleccionarla
+                    //sirve para luego seleccionarla
                  llamadasEncontradas.Add(llamada);
-                 //solo me sirve para mostralas
+                 //solo sirve para mostralas
                  llamadasEncontradasMostrar.Add(llamada.ToString()); 
                 }
             }
@@ -74,10 +73,10 @@ namespace PPAI_RosaMosqueta.Gestor
         {
             nombreCliente = llamadaSeleccionada.getNombreClienteDeLLamada();
             Console.WriteLine(nombreCliente);
-            duracion = llamadaSeleccionada.getDuracion().ToString();
-            Console.WriteLine(duracion);
             ultimoEstadoLlamada = llamadaSeleccionada.determinarUltimoEstado();
             Console.WriteLine(ultimoEstadoLlamada);
+            duracion = llamadaSeleccionada.getDuracion().ToString();
+            Console.WriteLine(duracion);
 
             // GENERADOR DE DEPENDENCIAS
             Data.Data.ResPos1.pregunta = Data.Data.Preg1;
