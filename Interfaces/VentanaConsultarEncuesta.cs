@@ -38,6 +38,8 @@ namespace PPAI_RosaMosqueta
             buttonBuscar.Visible = true;
             gestor.consultarEncuesta();
             btn_Cancelar.Visible = true;
+            lbl_Hasta.Visible = true;
+            lbl_Desde.Visible = true;
         }
 
         public void solicitarSeleccionPeriodo()
@@ -102,8 +104,7 @@ namespace PPAI_RosaMosqueta
             labelEstadoActualLlamada.Visible =true;
             textBoxEstadoActualLLamada.Visible = true;
             textBoxEstadoActualLLamada.Text = estadoActual;
-            lbl_Hasta.Visible = true;
-            lbl_Desde.Visible = true;
+            
 
             gBox_Encuesta.Visible = true;
             label2.Visible = true;
