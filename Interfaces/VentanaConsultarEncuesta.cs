@@ -38,11 +38,8 @@ namespace PPAI_RosaMosqueta
             buttonBuscar.Visible = true;
             gestor.consultarEncuesta();
             btn_Cancelar.Visible = true;
-        }
-
-        private void VentanaConsultarEncuesta_Load(object sender, EventArgs e)
-        {
-
+            lbl_Hasta.Visible = true;
+            lbl_Desde.Visible = true;
         }
 
         public void solicitarSeleccionPeriodo()
@@ -95,8 +92,9 @@ namespace PPAI_RosaMosqueta
             gestor.llamadaSeleccionada(row);
         }
 
-        public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual)
+        public void mostrarDatosLLamadaSeleccionada(string nombreCliente, string duracion, string estadoActual, string respuestas)
         {
+            gBox_Llamada.Visible = true;
             labelNombreCompleto.Visible = true;
             textNombreCompleto.Visible = true;
             textNombreCompleto.Text = nombreCliente;
@@ -106,8 +104,23 @@ namespace PPAI_RosaMosqueta
             labelEstadoActualLlamada.Visible =true;
             textBoxEstadoActualLLamada.Visible = true;
             textBoxEstadoActualLLamada.Text = estadoActual;
+            
 
+            gBox_Encuesta.Visible = true;
+            label2.Visible = true;
+            label2.Text = "Nombre de la encuesta: " + respuestas;
+            btn_CSV.Visible = true;
+            btn_imprimir.Visible = true;
+        }
 
+        private void btn_CSV_Click(object sender, EventArgs e)
+        {
+            gestor.generarCSV();
+        }
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            gestor.imprimir();
         }
     }
 }

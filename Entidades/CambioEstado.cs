@@ -17,7 +17,6 @@ namespace PPAI_RosaMosqueta.Entidades
         {
             this.fechaHoraInicio = fechaHoraInicio;
             this.estado = estado;
-
         }
 
         //muestra el nombre de su estado asociado

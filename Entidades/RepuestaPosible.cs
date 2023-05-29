@@ -10,17 +10,19 @@ namespace PPAI_RosaMosqueta.Entidades
     {
         private string descripcion { get; set; }
         private int valor { get; set; }
-        public RespuestaPosible(string descripcion, int valor)
+        public Pregunta pregunta { get; set; }
+
+
+        public RespuestaPosible(string descripcion, int valor, Pregunta pregunta)
         {
             this.descripcion = descripcion;
             this.valor = valor;
-
+            this.pregunta = pregunta;
         }
+
         public string getDrescripcionRta()
         {
             return descripcion;
         }
-
-        
     }
 }
