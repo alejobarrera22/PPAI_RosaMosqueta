@@ -376,7 +376,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Encuesta";
-            this.Load += new System.EventHandler(this.VentanaConsultarEncuesta_Load);
             this.gBox_Periodo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataLlamadasEncontradas)).EndInit();
             this.gBox_Llamada.ResumeLayout(false);
