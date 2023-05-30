@@ -10,7 +10,7 @@ namespace PPAI_RosaMosqueta.Entidades
     {
 
         private string nombre { get; set; }
-
+        //constructor
         public Estado(string nombre)
         {
             this.nombre = nombre;

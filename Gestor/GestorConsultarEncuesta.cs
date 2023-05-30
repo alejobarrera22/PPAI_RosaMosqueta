@@ -23,44 +23,48 @@ namespace PPAI_RosaMosqueta.Gestor
         private string nombreCliente { get; set; }
         private string ultimoEstadoLlamada { get; set; }
         private string duracion { get; set; }
+        
         public GestorConsultarEncuesta(VentanaConsultarEncuesta pantalla)
         {
             this.pantallaConsultarEncuesta = pantalla;
         }
-
+        
         public void consultarEncuesta()
         {
             //Envia a la pantalla un mensaje para que ingrese un periodo
             pantallaConsultarEncuesta.solicitarSeleccionPeriodo();
         }
-
+        
         public void periodoSeleccionado(DateTime fechaDesde, DateTime fechaHasta)
         {
             filtrarPorPeridoYRepuestas(fechaDesde, fechaHasta);
             
         }
-
+        /*
+         * Este método se encarga de filtrar una lista de llamadas por un período de tiempo y la presencia de respuestas. Primero,
+         * se crea una lista vacía llamada "llamadasEncontradas" y otra lista vacía llamada "llamadasEncontradasMostrar". Luego,
+         * se recorre cada llamada en la lista de llamadas existente. Si la llamada está dentro del período de tiempo especificado y tiene respuestas,
+         * se agrega a la lista "llamadasEncontradas" (que servirá para seleccionar las llamadas más adelante) y se agrega una representación en forma de cadena de la llamada a
+         * la lista "llamadasEncontradasMostrar" (que se utiliza para mostrar las llamadas). Finalmente, se llama a un método en la pantalla de consultar encuestas para solicitar
+         * la selección de llamadas a partir de la lista de llamadas encontradas y mostradas.
+         */
         public void filtrarPorPeridoYRepuestas(DateTime fechaDesde, DateTime fechaHasta)
         {
             llamadasEncontradas = new List<Llamada>();
-            //no se me ocurrio otra forma para mostrala osino no me deja pasarle como parametro
             List<string> llamadasEncontradasMostrar = new List<string>();
-            //aca saco del data la lista de llamadas
             foreach (var llamada in Data.Data.listaDeLLamadas())
             {
                 if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
-                {
-                    //Me sirve para luego seleccionarla
+                { 
+                 //Me sirve para luego seleccionarla
                  llamadasEncontradas.Add(llamada);
                  //solo me sirve para mostralas
                  llamadasEncontradasMostrar.Add(llamada.ToString()); 
                 }
             }
-
-
-            //aca en verdad tendrian que pasarle como parametro las llamadas, para que solamente cuente cuantas hay y mostrarlas en la grilla
-            pantallaConsultarEncuesta.pedirSeleccionLLamada(llamadasEncontradasMostrar);
+            pantallaConsultarEncuesta.solicitarSeleccionLLamada(llamadasEncontradasMostrar);
         }
+
         //lo invoca la ventana y le pasa como parametro el index de la fila seleccionada
         public void llamadaSeleccionada(int row)
         {
@@ -73,12 +77,9 @@ namespace PPAI_RosaMosqueta.Gestor
         public void getDatosLLamada(Llamada llamadaSeleccionada)
         {
             nombreCliente = llamadaSeleccionada.getNombreClienteDeLLamada();
-            Console.WriteLine(nombreCliente);
-            duracion = llamadaSeleccionada.getDuracion().ToString();
-            Console.WriteLine(duracion);
             ultimoEstadoLlamada = llamadaSeleccionada.determinarUltimoEstado();
-            Console.WriteLine(ultimoEstadoLlamada);
-
+            duracion = llamadaSeleccionada.getDuracion().ToString();
+            
             // GENERADOR DE DEPENDENCIAS
             Data.Data.ResPos1.pregunta = Data.Data.Preg1;
             Data.Data.ResPos2.pregunta = Data.Data.Preg1;
@@ -102,7 +103,6 @@ namespace PPAI_RosaMosqueta.Gestor
             Data.Data.ResPos20.pregunta = Data.Data.Preg6;
             Data.Data.ResPos21.pregunta = Data.Data.Preg6;
             Data.Data.ResPos22.pregunta = Data.Data.Preg6;
-
             Data.Data.Preg1.encuesta = Data.Data.Encuesta1;
             Data.Data.Preg2.encuesta = Data.Data.Encuesta1;
             Data.Data.Preg3.encuesta = Data.Data.Encuesta2;
@@ -113,14 +113,14 @@ namespace PPAI_RosaMosqueta.Gestor
             Data.Data.Preg8.encuesta = Data.Data.Encuesta1;
             Data.Data.Preg9.encuesta = Data.Data.Encuesta2;
 
-            //Falta obtener las preguntas y repuestas,etc
             string datosEncuesta = llamadaSeleccionada.getRespuestas();
             //Console.WriteLine(datosEncuesta);
 
             pantallaConsultarEncuesta.mostrarDatosLLamadaSeleccionada(nombreCliente, duracion, ultimoEstadoLlamada, datosEncuesta);
+            pantallaConsultarEncuesta.solicitarSeleccionFormaGeneracion();
         }
 
-        public void generarCSV()
+        public void seleccionGenerarCSV()
         {
             string datosEncabezado = nombreCliente + ";" + ultimoEstadoLlamada + ";" + duracion;
             string datosCSV = seleccionadaLlamada.getDatosCSV();

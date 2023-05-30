@@ -19,7 +19,7 @@ namespace PPAI_RosaMosqueta.Entidades
         private bool encuestaEnviada { get; set; }
         private string observacionAuditor { get; set; }
 
-
+        //constructor
         public Llamada(List<CambioEstado> cambioEstado, List<RespuestaCliente> repuestasDeEncuesta, Cliente cliente, string descripcionOperador, string detalleAccionRequerida,
             int duracion, bool encuestaEnviada, string observacionAuditor)
         {
@@ -56,7 +56,8 @@ namespace PPAI_RosaMosqueta.Entidades
             return (repuestasDeEncuesta != null);
         }
 
-
+        
+        //llama al metodo de la clase cliente getNombre()
         public string getNombreClienteDeLLamada()
         {
             return cliente.getNombre();
@@ -67,14 +68,17 @@ namespace PPAI_RosaMosqueta.Entidades
             return duracion;
         }
 
+        /*
+         * Este método determina el último estado registrado en una lista de cambios de estado. Primero, se utiliza el método OrderByDescending para ordenar la lista de cambios de estado según
+         * la fecha y hora de inicio en orden descendente. Luego, se utiliza FirstOrDefault para obtener el primer elemento de la lista, que corresponderá al último estado registrado.
+            Si se encuentra un último estado válido (es decir, si la lista de cambios de estado no está vacía), se devuelve el nombre del estado utilizando el método getNombreEstado(). 
+            En caso contrario, si no se encuentra ningún estado, se devuelve null
+         */
         public string determinarUltimoEstado()
         {
-            //// Ordenar la lista en orden descendente según la fechaHoraInicio
             var ultimoEstado = cambioEstado.OrderByDescending(c => c.getFechaHoraIncio()).FirstOrDefault();
             if (ultimoEstado != null)
             {
-                //// Se encontró el último estado
-                // Accede a los atributos o propiedades del último estado si es necesario
                 return ultimoEstado.getNombreEstado();
             }
             return null;

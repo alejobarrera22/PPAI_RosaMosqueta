@@ -58,7 +58,6 @@
     <Compile Include="Entidades\RepuestaPosible.cs" />
     <Compile Include="Gestor\GestorConsultarEncuesta.cs" />
     <Compile Include="Interfaces\ILlamadaCSV.cs" />
-    <Compile Include="Interfaces\ImprimirLlamada.cs" />
     <Compile Include="Interfaces\VentanaConsultarEncuesta.cs">
       <SubType>Form</SubType>
     </Compile>

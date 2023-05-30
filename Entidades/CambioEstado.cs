@@ -32,6 +32,4 @@ namespace PPAI_RosaMosqueta.Entidades
             return fechaHoraInicio;
         }
     }
-
-    
 }
