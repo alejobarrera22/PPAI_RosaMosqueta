@@ -49,7 +49,7 @@ namespace PPAI_RosaMosqueta.Gestor
             {
                 if (llamada.esDePerido(fechaDesde, fechaHasta) && llamada.tieneRtas())
                 {
-                    //sirve para luego seleccionarla
+                  //sirve para luego seleccionarla
                  llamadasEncontradas.Add(llamada);
                  //solo sirve para mostralas
                  llamadasEncontradasMostrar.Add(llamada.ToString()); 
@@ -58,7 +58,7 @@ namespace PPAI_RosaMosqueta.Gestor
 
 
             //aca en verdad tendrian que pasarle como parametro las llamadas, para que solamente cuente cuantas hay y mostrarlas en la grilla
-            pantallaConsultarEncuesta.pedirSeleccionLLamada(llamadasEncontradasMostrar);
+            pantallaConsultarEncuesta.solicitarSeleccionLLamada(llamadasEncontradasMostrar);
         }
         //lo invoca la ventana y le pasa como parametro el index de la fila seleccionada
         public void llamadaSeleccionada(int row)

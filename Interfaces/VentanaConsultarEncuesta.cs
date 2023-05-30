@@ -49,12 +49,10 @@ namespace PPAI_RosaMosqueta
         }
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            //borrar el contenido de la dataGrindLlamadas
-            //dataGrindLlamadas.Rows.Clear();
             gestor.periodoSeleccionado(dateDesde.Value, dateHasta.Value);
         }
 
-        public void pedirSeleccionLLamada(List<string> llamadasEncontradas)
+        public void solicitarSeleccionLLamada(List<string> llamadasEncontradas)
         {
             
             dataLlamadasEncontradas.Visible = true;
@@ -90,7 +88,7 @@ namespace PPAI_RosaMosqueta
             textNombreCompleto.Text = nombreCliente;
             labelDuracionLlamada.Visible = true;
             textBoxDuracionLLamada.Visible = true;
-            textBoxDuracionLLamada.Text = duracion;
+            textBoxDuracionLLamada.Text = duracion + " segundos";
             labelEstadoActualLlamada.Visible =true;
             textBoxEstadoActualLLamada.Visible = true;
             textBoxEstadoActualLLamada.Text = estadoActual;

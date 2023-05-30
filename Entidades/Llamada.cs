@@ -69,11 +69,11 @@ namespace PPAI_RosaMosqueta.Entidades
 
         public string determinarUltimoEstado()
         {
-            //// Ordenar la lista en orden descendente según la fechaHoraInicio
+            // Ordenar la lista en orden descendente según la fechaHoraInicio
             var ultimoEstado = cambioEstado.OrderByDescending(c => c.getFechaHoraIncio()).FirstOrDefault();
             if (ultimoEstado != null)
             {
-                //// Se encontró el último estado
+                // Se encontró el último estado
                 // Accede a los atributos o propiedades del último estado si es necesario
                 return ultimoEstado.getNombreEstado();
             }
